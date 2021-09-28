@@ -1,9 +1,7 @@
 # Computationl Resources
 
-* Introduction to High Performance Computing via Open OnDemand to use interactive computing and the Slurm batch 
-scheduler for running scientific codes. 
+* Introduction to High Performance Computing via Open OnDemand
 * Introduction to NSF Jetstream2 cloud computing resource for using and creating virtual machines 
-
 * Introduction to the Tapis Abaco function-as-a-service for on-demand cloud computing resources to perform computation. 
 ---
 
