@@ -25,11 +25,11 @@ episode_order:
   - 11-hpc-next
   - 12-hpc-next
   - 20-jetstream2
-  - 21-jetstream2-next
-  - 22-jetstream2-next
+#  - 21-jetstream2-next
+#  - 22-jetstream2-next
   - 30-tapis
-  - 31-tapis-next
-  - 32-tapis-next
+#  - 31-tapis-next
+#  - 32-tapis-next
 
 #------------------------------------------------------------
 # Generic settings (should not need to change).
