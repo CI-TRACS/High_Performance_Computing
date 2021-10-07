@@ -1,4 +1,4 @@
-# Computationl Resources
+# High Performance Computing
 
 * Introduction to High Performance Computing via Open OnDemand to use interactive computing and the Slurm batch 
 scheduler for running scientific codes. 
