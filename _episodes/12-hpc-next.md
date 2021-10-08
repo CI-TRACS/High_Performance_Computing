@@ -1,11 +1,9 @@
 ---
-title: "Optimization by file system selection"
+title: "XXXXXXXXXX"
 teaching: 40
 exercises: 10
 questions:
-- "When does the choice of file system matter"
-- "How do I choose a file system to use"
-- "How do I stage files for my job"
+- "XXXXXXXXXXXXXX"
 objectives:
 - "XXXXXXXXX"
 keypoints:
