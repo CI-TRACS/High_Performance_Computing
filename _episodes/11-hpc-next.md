@@ -1,14 +1,13 @@
 ---
-title: "Singularity Containers"
+title: "XXXXXXXX"
 teaching: 40
 exercises: 10
 questions:
-- "What is a container?"
-- "How do I make a singularity container from a Docker container?"
+- XXXXXXXXX"
 objectives:
-- "Create a singularity container from Dockerhub"
+- "XXXXXXXXX"
 keypoints:
-- "Singularity is one of several container tools" 
+- "XXXXXXXXXX" 
 ---
 
 {% include links.md %}
