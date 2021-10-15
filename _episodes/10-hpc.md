@@ -49,7 +49,8 @@ impressive than the [Top-500](https://www.top500.org). Clusters are often
 maintained in computing centers that support several such systems, all sharing
 common networking and storage to support common compute intensive tasks.
 
-> # What else is an HPC system good for
+> ## What else is an HPC system good for
+>
 > While HPC is typically seen as where you go if you have large problems, HPC 
 > clusters can be used for even smaller cases where a single server is all that you need,
 > or you have a reserach problem in which the task is very short, but you need to do tens 
@@ -92,7 +93,8 @@ operation of the login node. As a rule of thumb, consider all transfers of
 a volume larger than 500 MB to 1 GB as large. But these numbers change, 
 e.g., depending on the network connection of yourself and of your cluster 
 or other factors.
-> # Data transfer nodes on Mana
+> ## Data transfer nodes on Mana
+>
 > Mana has two such 
 > [data transfer nodes](https://www.hawaii.edu/bwiki/display/HPC/Data+transfer+Questions) 
 > that are available for use.
@@ -112,13 +114,14 @@ or hard tasks that require a lot of computational resources.
 
 All interaction with the compute nodes is handled by a specialized piece of
 software called a scheduler.
-> # Mana scheudler 
+> ## Mana scheudler 
+>
 > Mana utilizes a scheduler known as the 
 > [Slurm Workload Manager](https://slurm.schedmd.com/overview.html).
 {: .callout}
 
 
-# Support nodes
+## Support nodes
 There are also specialized machines used for managing disk storage, user
 authentication, and other infrastructure-related tasks. Although we do not
 typically logon to or interact with these machines directly, they enable a
