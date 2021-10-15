@@ -120,7 +120,7 @@ software called a scheduler.
 {: .callout}
 
 
-## Support nodes
+### Support nodes
 There are also specialized machines used for managing disk storage, user
 authentication, and other infrastructure-related tasks. Although we do not
 typically logon to or interact with these machines directly, they enable a
