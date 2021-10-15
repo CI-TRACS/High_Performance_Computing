@@ -1,15 +1,19 @@
 # High Performance Computing
 
-* Introduction to High Performance Computing via Open OnDemand to use interactive computing and the Slurm batch 
-scheduler for running scientific codes. 
-* Introduction to NSF Jetstream2 cloud computing resource for using and creating virtual machines 
+This workshop focuses on utilization of High performance Computing (HPC) Clusters, such as Mana, for deep learning tasks as well as the benefits of understanding the different types of file systems available on HPC clusters and basic ways one would stage data from slower file systems to faster file systems.
+Attendees will learn how to use Jupyter Lab on Mana via Open OnDemand, the benefits of using GPUs over just CPUs for deep learning applications and how staging data the correct file system can improve performance of deep learning jobs.
 
-* Introduction to the Tapis Abaco function-as-a-service for on-demand cloud computing resources to perform computation. 
 ---
 
-**Learning Outcomes:** Demonstrate the ability to choose, appropriate Computational resources in support of scientific computation. 
+**Learning Outcomes:** 
+By the end of this workshop attendees will be able to: 
+* Have a basic understanding of how to access Open OnDemand and use Jupyter Lab on Mana
+* Have a basic understanding of how to request GPUs and utilize them for deep learning tasks
+* Have a basic understanding of the performance difference between CPU and GPU for deep learning
+* Have a basic understanding of different types of file system found on HPC clusters
+* Have a basic understanding of how correct file system choice affect deep learning performance
 
-**CI Tools:** Open on Demand, Jetstream2, Tapis 
+**CI Tools:** Open on Demand, Jupyter Lab 
  
 ---
 
