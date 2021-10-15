@@ -1,13 +1,12 @@
 ---
 title: "What is High Performance Computing (HPC)"
-teaching: 15
-exercises: 5
+teaching: 20
+exercises: 0
 questions:
 - "What is an HPC system?"
 - "How does an HPC system work?"
 objectives:
-- "Identify how an HPC system could benefit you."
-- "Modes of accessing an HPC system."
+- "Understand the general HPC system architecture."
 keypoints:
 - "High Performance Computing (HPC) typically involves connecting to very large computing systems elsewhere in the world."
 - "These systems can be used to do work that would either be impossible or much slower on smaller systems."
@@ -56,7 +55,7 @@ common networking and storage to support common compute intensive tasks.
 > or you have a reserach problem in which the task is very short, but you need to do tens 
 > of thousands of iterations, which is typically known as 
 > [High Throughput Computing (HTC)](https://en.wikipedia.org/wiki/High-throughput_computing).
-> {: .callout}
+{: .callout}
 
 ## Nodes
 Individual computers that compose a cluster are typically called *nodes*
