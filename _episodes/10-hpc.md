@@ -3,91 +3,133 @@ title: "What is High Performance Computing (HPC)"
 teaching: 15
 exercises: 5
 questions:
-- "When is HPC appropriate to use?"
+- "What is an HPC system?"
+- "How does an HPC system work?"
 objectives:
 - "Identify how an HPC system could benefit you."
 - "Modes of accessing an HPC system."
 keypoints:
 - "High Performance Computing (HPC) typically involves connecting to very large computing systems elsewhere in the world."
 - "These systems can be used to do work that would either be impossible or much slower on smaller systems."
-- "HPC clusters can be used for High Throughput Computing workloads."
 - "HPC is typically not designed for persistent process."
 - "Open OnDemand can be a transition from completely CLI and the GUI."
 ---
 
-## When is HPC appropriate to use?
-Frequently, research problems that use computing can outgrow the capabilities
-of the desktop or laptop computer where they started:
 
-* A statistics student wants to cross-validate a model. This involves running
-  the model 1000 times &mdash; but each run takes an hour. Running the model on
-  a laptop will take over a month! In this research problem, final results are
-  calculated after all 1000 models have run, but typically only one model is
-  run at a time (in **serial**) on the laptop. Since each of the 1000 runs is
-  independent of all others, and given enough computers, it's theoretically
-  possible to run them all at once (in **parallel**).
-* A genomics researcher has been using small datasets of sequence data, but
-  soon will be receiving a new type of sequencing data that is 10 times as
-  large. It's already challenging to open the datasets on a computer &mdash;
-  analyzing these larger datasets will probably crash it. In this research
-  problem, the calculations required might be impossible to parallelize, but a
-  computer with **more memory** would be required to analyze the much larger
-  future data set.
-* An engineer is using a fluid dynamics package that has an option to run in
-  parallel. So far, this option was not used on a desktop. In going from 2D
-  to 3D simulations, the simulation time has more than tripled. It might be
-  useful to take advantage of that option or feature. In this research problem,
-  the calculations in each region of the simulation are largely independent of
-  calculations in other regions of the simulation. It's possible to run each
-  region's calculations simultaneously (in **parallel**), communicate selected
-  results to adjacent regions as needed, and repeat the calculations to
-  converge on a final set of results. In moving from a 2D to a 3D model, **both
-  the amount of data and the amount of calculations increases greatly**, and
-  it's theoretically possible to distribute the calculations across multiple
-  computers communicating over a shared network.
+## What Is an HPC System?
 
-In all these cases, access to more (and larger) computers is needed. Those
-computers should be usable at the same time, **solving many researchers'
-problems in parallel**.
+The words "cloud", "cluster", and the phrase "high-performance computing" or
+"HPC" are used a lot in different contexts and with various related meanings.
+So what do they mean? And more importantly, how do we use them in our work?
+
+The *cloud* is a generic term commonly used to refer to computing resources
+that are a) *provisioned* to users on demand or as needed and b) represent real
+or *virtual* resources that may be located anywhere on Earth. For example, a
+large company with computing resources in Brazil, Zimbabwe and Japan may manage
+those resources as its own *internal* cloud and that same company may also
+use commercial cloud resources provided by Amazon or Google. Cloud
+resources may refer to machines performing relatively simple tasks such as
+serving websites, providing shared storage, providing web services (such as
+e-mail or social media platforms), as well as more traditional compute
+intensive tasks such as running a simulation.
+
+The term *HPC system*, on the other hand, describes a stand-alone resource for
+computationally intensive workloads. They are typically comprised of a
+multitude of integrated processing and storage elements, designed to handle
+high volumes of data and/or large numbers of floating-point operations
+([FLOPS](https://en.wikipedia.org/wiki/FLOPS)) with the highest possible
+performance. For example, all of the machines on the
+[Top-500](https://www.top500.org) list are HPC systems. To support these
+constraints, an HPC resource must exist in a specific, fixed location:
+networking cables can only stretch so far, and electrical and optical signals
+can travel only so fast.
+
+The word "cluster" is often used for small to moderate scale HPC resources less
+impressive than the [Top-500](https://www.top500.org). Clusters are often
+maintained in computing centers that support several such systems, all sharing
+common networking and storage to support common compute intensive tasks.
+
+> # What else is an HPC system good for
+> While HPC is typically seen as where you go if you have large problems, HPC 
+> clusters can be used for even smaller cases where a single server is all that you need,
+> or you have a reserach problem in which the task is very short, but you need to do tens 
+> of thousands of iterations, which is typically known as 
+> [High Throughput Computing (HTC)](https://en.wikipedia.org/wiki/High-throughput_computing).
+> {: .callout}
+
+## Nodes
+Individual computers that compose a cluster are typically called *nodes*
+(although you will also hear people call them *servers*, *computers* and
+*machines*). On a cluster, there are different types of nodes for different
+types of tasks.
+
+## What's in a Node?
+
+All of the nodes in an HPC system have the same components as your own laptop
+or desktop: *CPUs* (sometimes also called *processors* or *cores*), *memory*
+(or *RAM*), and *disk* space. CPUs are a computer's tool for actually running
+programs and calculations. Information about a current task is stored in the
+computer's memory. Disk refers to all storage that can be accessed like a file
+system. This is generally storage that can hold data permanently, i.e. data is
+still there even if the computer has been restarted. While this storage can be
+local (a hard drive installed inside of it), it is more common for nodes to
+connect to a shared, remote fileserver or cluster of servers.
+
+{% include figure.html url="" max-width="40%"
+   file="/fig/node_anatomy.png"
+   alt="Node anatomy" caption="" %}
 
 
-While HPC is typically seen as where you go if you have large problems, HPC clusters can be used for even smaller cases where a single server is all that you need,
-or you have a reserach problem in which the task is very short, but you need to do tens of thousands of iterations, which is typically known as High Throughput Computing (HTC)
+## Login Nodes
+Serves as an access point to the cluster. As a gateway, 
+it issuited for uploading and downloading files. 
 
-> ## I've Never Used a Server, Have I?
+## Data Transfer Nodes
+If you want to transfer larger amounts of data to or from a cluster, some
+systems offer dedicated nodes for data transfers only. The motivation for
+this lies in the fact that larger data transfers should not obstruct
+operation of the login node. As a rule of thumb, consider all transfers of 
+a volume larger than 500 MB to 1 GB as large. But these numbers change, 
+e.g., depending on the network connection of yourself and of your cluster 
+or other factors.
+> # Data transfer nodes on Mana
+> Mana has two such 
+> [data transfer nodes](https://www.hawaii.edu/bwiki/display/HPC/Data+transfer+Questions) 
+> that are available for use.
+{: .callout}
+
+## Compute Nodes
+The real work on a cluster gets done by the *compute* (or *worker*) *nodes*.
+Compute nodes come in many shapes and sizes, but generally are dedicated to long
+or hard tasks that require a lot of computational resources.
+
+> ## Differences Between Compute Nodes
 >
-> Take a minute and think about which of your daily interactions with a
-> computer may require a remote server or even cluster to provide you with
-> results.
->
-> > ## Some Ideas
-> >
-> > * Checking email: your computer (possibly in your pocket) contacts a remote
-> >   machine, authenticates, and downloads a list of new messages; it also
-> >   uploads changes to message status, such as whether you read, marked as
-> >   junk, or deleted the message. Since yours is not the only account, the
-> >   mail server is probably one of many in a data center.
-> > * Searching for a phrase online involves comparing your search term against
-> >   a massive database of all known sites, looking for matches. This "query"
-> >   operation can be straightforward, but building that database is a
-> >   [monumental task](https://en.wikipedia.org/wiki/MapReduce)! Servers are
-> >   involved at every step.
-> > * Searching for directions on a mapping website involves connecting your
-> >   (A) starting and (B) end points by [traversing a graph](
-> >   https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) in search of
-> >   the "shortest" path by distance, time, expense, or another metric.
-> >   Converting a map into the right form is relatively simple, but
-> >   calculating all the possible routes between A and B is expensive.
-> >
-> > Checking email could be serial: your machine connects to one server and
-> > exchanges data. Searching by querying the database for your search term (or
-> > endpoints) could also be serial, in that one machine receives your query
-> > and returns the result. However, assembling and storing the full database
-> > is far beyond the capability of any one machine. Therefore, these functions
-> > are served in parallel by a large, ["hyperscale"](
-> > https://en.wikipedia.org/wiki/Hyperscale_computing) collection of servers
-> > working together.
-> {: .solution}
-{: .challenge }
+> Many HPC clusters have a variety of nodes optimized for particular workloads.
+> Some nodes may have larger amount of memory, or specialized resources such as
+> Graphical Processing Units (GPUs).
+{: .callout}
+
+All interaction with the compute nodes is handled by a specialized piece of
+software called a scheduler.
+> # Mana scheudler 
+> Mana utilizes a scheduler known as the 
+> [Slurm Workload Manager](https://slurm.schedmd.com/overview.html).
+{: .callout}
+
+
+# Support nodes
+There are also specialized machines used for managing disk storage, user
+authentication, and other infrastructure-related tasks. Although we do not
+typically logon to or interact with these machines directly, they enable a
+number of key features like ensuring our user account and files are available
+throughout the HPC system.
+
+
+
+> Material used and modfied from the 
+> ["Introduction to High-Performance Computing" Incubator workshop](https://carpentries-incubator.github.io/hpc-intro/).
+.callout
+
 
 {% include links.md %}

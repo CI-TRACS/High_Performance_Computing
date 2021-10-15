@@ -20,14 +20,14 @@ life_cycle: "pre-alpha"
 
 
 episode_order:
-  - 00-intro
+#  - 00-intro
   - 10-hpc
-  - 11-hpc-next
-  - 12-hpc-next
-  - 20-jetstream2
+  - 11-hpc-deep-learning
+  - 12-hpc-file-systems
+#  - 20-jetstream2
 #  - 21-jetstream2-next
 #  - 22-jetstream2-next
-  - 30-tapis
+#  - 30-tapis
 #  - 31-tapis-next
 #  - 32-tapis-next
 
