@@ -37,6 +37,7 @@ Current maintainers of this lesson are
 
 * David Schanzenbach
 * Aditi Jaiswal
+* Sorapong Khongnawang
 
 ## Authors
 
