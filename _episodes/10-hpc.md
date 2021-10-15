@@ -131,7 +131,7 @@ throughout the HPC system.
 
 > Material used and modfied from the 
 > ["Introduction to High-Performance Computing" Incubator workshop](https://carpentries-incubator.github.io/hpc-intro/).
-.callout
+{: .callout}
 
 
 {% include links.md %}
