@@ -63,7 +63,7 @@ Individual computers that compose a cluster are typically called *nodes*
 *machines*). On a cluster, there are different types of nodes for different
 types of tasks.
 
-## What's in a Node?
+### What's in a Node?
 
 All of the nodes in an HPC system have the same components as your own laptop
 or desktop: *CPUs* (sometimes also called *processors* or *cores*), *memory*
@@ -80,11 +80,11 @@ connect to a shared, remote fileserver or cluster of servers.
    alt="Node anatomy" caption="" %}
 
 
-## Login Nodes
+### Login Nodes
 Serves as an access point to the cluster. As a gateway, 
 it issuited for uploading and downloading files. 
 
-## Data Transfer Nodes
+### Data Transfer Nodes
 If you want to transfer larger amounts of data to or from a cluster, some
 systems offer dedicated nodes for data transfers only. The motivation for
 this lies in the fact that larger data transfers should not obstruct
@@ -99,7 +99,7 @@ or other factors.
 > that are available for use.
 {: .callout}
 
-## Compute Nodes
+### Compute Nodes
 The real work on a cluster gets done by the *compute* (or *worker*) *nodes*.
 Compute nodes come in many shapes and sizes, but generally are dedicated to long
 or hard tasks that require a lot of computational resources.
@@ -113,7 +113,7 @@ or hard tasks that require a lot of computational resources.
 
 All interaction with the compute nodes is handled by a specialized piece of
 software called a scheduler.
-> ## Mana scheudler 
+> ## Mana scheduler 
 >
 > Mana utilizes a scheduler known as the 
 > [Slurm Workload Manager](https://slurm.schedmd.com/overview.html).
