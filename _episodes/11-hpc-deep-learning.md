@@ -1,5 +1,5 @@
 ---
-title: "XXXXXXXX"
+title: "Deep learning CPU vs GPU "
 teaching: 40
 exercises: 10
 questions:
