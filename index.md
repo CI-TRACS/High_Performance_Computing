@@ -6,26 +6,27 @@ permalink: index.html  # Is the only page that doesn't follow the pattern /:path
 
 {% include gh_variables.html %}
 
-This workshop is an introduction to using high-performance computing systems
-effectively. We can't cover every case or give an exhaustive course on parallel
-programming in just an hour of teaching time. Instead, this workshop is intended
-to give students an introduction and overview of the tools available and
-how to use them effectively.
+This workshop focuses on Utilization of High performance Computing (HPC) clusters, such as Mana, for deep learning tasks as well as the benefits of understanding the different types of file systems available on HPC clusters and basic ways one would stage data from slower file systems to faster file systems.
+Attendees will learn how to use Jupyter Lab on Mana via Open OnDemand, the benefits of using GPUs over just CPUs for deep learning applications and how staging data the correct file system can improve performance of deep learning jobs.
+
 
 > ## Prerequisites
 >
->  * Command line experience is necessary for this lesson. We recommend the  participants to go through [shell-novice](https://swcarpentry.github.io/shell-novice/), if new to the command line (also known as terminal or shell).
->  * Attended an On-boarding/introductory session for the Mana HPC
-> 
+> * Command line experience is necessary for this lesson. We recommend the  participants to go through [shell-novice](https://swcarpentry.github.io/shell-novice/), if new to > > 
+> * Have an account on Mana 
+> * Have UH Duo/MFA enabled
+> * Be able to connect to the workshop in Zoom
+> * Have a modern web browser
 {: .prereq}
 
 By the end of this workshop, students will know how to:
 
-* Identify problems a cluster can help solve
-* Use the UNIX shell (also known as terminal or command line) to operate a
-  computer, connect to a cluster, and write simple shell scripts.
-* Submit and manage jobs on a cluster using a scheduler, transfer files, and
-  use software through environment modules.
+* Have a basic understanding of how to access Open OnDemand and use Jupyter Lab on Mana
+* Have a basic understanding of how to request GPUs and utilize them for deep learning tasks
+* Have a basic understanding of the performance difference between CPU and GPU for deep learning
+* Have a basic understanding of different types of file system found on HPC clusters
+* Have a basic understanding of how correct file system choice affect deep learning performance
+
 
 > ## Getting Started
 >
