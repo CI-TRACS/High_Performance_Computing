@@ -13,7 +13,7 @@ By the end of this workshop attendees will be able to:
 * Have a basic understanding of different types of file system found on HPC clusters
 * Have a basic understanding of how correct file system choice affect deep learning performance
 
-**CI Tools:** Open on Demand, Jupyter Lab 
+**CI Tools:** Open on Demand
  
 ---
 
