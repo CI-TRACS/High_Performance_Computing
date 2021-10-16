@@ -12,7 +12,7 @@ Attendees will learn how to use Jupyter Lab on Mana via Open OnDemand, the benef
 
 > ## Prerequisites
 >
-> * Command line experience is necessary for this lesson. We recommend the  participants to go through [shell-novice](https://swcarpentry.github.io/shell-novice/), if new to > > 
+> * Command line experience is necessary for this lesson. We recommend the  participants to go through [shell-novice](https://swcarpentry.github.io/shell-novice/) if you are new to the command-line 
 > * Have an account on Mana 
 > * Have UH Duo/MFA enabled
 > * Be able to connect to the workshop in Zoom
