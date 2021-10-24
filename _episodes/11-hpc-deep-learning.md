@@ -17,7 +17,7 @@ keypoints:
 On logging into a cluster, you are into a login node which has limited storage and restricted use because it is being shared by everybody so you submit your jobs to a compute node to get required resources for your research work. These compute nodes have lots of storage. There are 2 ways to access the cluster:
 1. Using Secure Shell (SSH)
    - done using Linux like commands in terminal (alo known as Command Line Interface or CLI),
-   - login using **ssh <username>@mana.its.hawaii.edu**,
+   - login using **ssh <username>@mana.its.hawaii.edu** ,
    - works with weak connections too.
   
   <img src="/fig/CLI.png" width="300" height="400">
