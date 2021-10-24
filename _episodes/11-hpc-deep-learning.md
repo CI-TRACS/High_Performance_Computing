@@ -41,7 +41,8 @@ It is a flexible, web based application which is mainly used in data science and
   
 You write your code or plain text in rectangular “cells” and the browser then passes it to the back-end “kernel”, which runs your code and returns output.
 
-`.ipynb file is a python notebook which stores code, text, markdown, plots, results in a specific format but .py file is a python file which only stores code and plain text (like comments etc).`  
+`**Note:**.ipynb file is a python notebook which stores code, text, markdown, plots, results in a specific format but .py file is a python file which only stores 
+ code and plain text (like comments etc).`  
   
 ## How to access and install softwares and modules on cluster?
   
@@ -60,7 +61,7 @@ You can use following commands to see what modules are available on the cluster 
 
 2. Anaconda (or Conda): cross platform package and environment manager which lets you access C, C++ libraries, R package for scientific computing along with Python.
   
-`Note: package contains all the files you need for a module`  
+`**Note:** package contains all the files you need for a module`  
 
 ### Anaconda
 - allows you to install softwares written in any programming language,
