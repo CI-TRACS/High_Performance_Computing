@@ -14,11 +14,10 @@ keypoints:
 
 ## Connecting to UH-HPC cluster Mana (SSH vs OOD)
 
-On logging into a cluster, you are into a login node which has limited storage and restricted use because it is being shared by everybody so you submit your jobs to a compute node to get required resources for your research work. These compute nodes have lots of storage. There are 2 ways to access the cluster:
+On logging into a cluster, you are into a login node which has limited storage and restricted use because it is being shared by everybody so you submit your jobs to a compute node to get required resources for your research work. There are 2 ways to access these compute nodes on the cluster:
 1. Using Secure Shell (SSH)
-   - done using Linux like commands in terminal (alo known as Command Line Interface or CLI),
-   - login using **ssh <username>@mana.its.hawaii.edu** ,
-   - works with weak connections too.
+   - done using Linux like commands in terminal (also known as Command Line Interface or CLI),
+   - login using **ssh <username>@mana.its.hawaii.edu**
   
   <img src="/fig/CLI.png" width="300" height="400">
   
@@ -36,15 +35,14 @@ On logging into a cluster, you are into a login node which has limited storage a
 Jupyter notebook allows you to access .ipynb files only, i.e. it will create a computational environment which stores your code, results, plots, texts etc. And here you can work only in one of your environment. But Jupyter Lab gives a better user interface along with all the facilties provided by the notebook. It has a modular structure where one can access .py, .ipynb, html or markdown files, access filebrowser, all in the same window. 
   
 ### Jupyter Lab
-It is a flexible, web based application which is mainly used in data science and machine learning research. It gives you acess to file browser (to upload, download, copy, rename, delete files), do data visualization, add data, code, texts, equations all in one place, use big data tools etc. It supports more than 40 programming languages and has an interactive output. It also allows you to share your work.
-
+It is a flexible, web based application which is mainly used in data science and machine learning research. It gives you acess to file browser (to upload, download, copy, rename, delete files), do data visualization, add data, code, texts, equations all in one place, use big data tools, share your work with others. It supports more than 40 programming languages and has an interactive output. 
 **Q. How does it work?**
   
-You write your code or comments/text in rectangular “cells” and the browser then passes it to the back-end “kernel” which runs your code and returns output.
+You write your code or plain text in rectangular “cells” and the browser then passes it to the back-end “kernel”, which runs your code and returns output.
 
-  
- > .ipynb file is a python notebook which stores code, text, markdown, plots, results in a specific format but .py file is a python file which only stores code and plain text (like comments etc).
-  
+```  
+.ipynb file is a python notebook which stores code, text, markdown, plots, results in a specific format but .py file is a python file which only stores code and plain text (like comments etc).
+```  
   
 ## How to access and install softwares and modules on cluster?
   
@@ -59,10 +57,11 @@ You can use following commands to see what modules are available on the cluster 
 ~~~
 {: .source}
   
-`Note: package contains all the files you need for a module`  
+1. Pip: tool to install Python software packages only. 
+
+2. Anaconda (or Conda): cross platform package and environment manager which lets you access C, C++ libraries, R package for scientific computing along with Python.
   
-1. Anaconda (or Conda): cross platform package and environment manager and may also access C, C++ libraries, R package for scientific computing along with Python.
-2. Pip: tool to install Python software packages only. 
+`Note: package contains all the files you need for a module`  
 
 ### Anaconda
 - allows you to install softwares written in any programming language,
@@ -73,7 +72,7 @@ You can use following commands to see what modules are available on the cluster 
   
 ## Environment setup
 
-> **Challenge 1**
+> ### **Challenge 1**
   
 > 1. Request for resources
 >
