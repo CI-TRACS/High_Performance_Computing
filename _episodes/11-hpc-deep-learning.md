@@ -72,16 +72,18 @@ You can use following commands to see what modules are available on the cluster 
 > If you try to access a library with different version based on your project, pip may throw an error. To create isolated environments you can use virtual environment (venv) with pip.
   
 ## Deep Learning tutorial
+
+> **Challenge 1**
   
-* Request for resources
-  
-> Challenge 1
+> * Request for resources
 >
 > 1. Go to mana.its.hawaii.edu and sign-in using your UH credentials  
 > 2. Interactive Apps -> Jupyter Lab -> partition: gpu -> Time: 2 hours -> Nodes: 1 -> Tasks: 1 -> Cores: 2 -> RAM: 10 -> # of GPU: 1 -> GPU Type: any
 > 3. Launch the session and open Jupyter Notebook
-  
-* Create a conda environment
-* Download libraries
+>  
+> * Create a conda environment
+>  
+> * Download libraries
+{: .challenge} 
 
 {% include links.md %}
