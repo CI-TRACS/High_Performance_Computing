@@ -41,9 +41,7 @@ It is a flexible, web based application which is mainly used in data science and
   
 You write your code or plain text in rectangular “cells” and the browser then passes it to the back-end “kernel”, which runs your code and returns output.
 
-`  
-.ipynb file is a python notebook which stores code, text, markdown, plots, results in a specific format but .py file is a python file which only stores code and plain text (like comments etc).
-`  
+`.ipynb file is a python notebook which stores code, text, markdown, plots, results in a specific format but .py file is a python file which only stores code and plain text (like comments etc).`  
   
 ## How to access and install softwares and modules on cluster?
   
