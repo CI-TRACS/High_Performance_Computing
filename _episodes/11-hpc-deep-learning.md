@@ -26,6 +26,9 @@ On logging into a cluster, you are into a login node which has limited storage a
    - use interactive apps like Jupyter, RStudio and even Linux shell,
    - easy access to file systems as well.
   
+ <img src="fig/MANA.png" width="100" height="100">
+                                             
+  
 ## Jupyter Lab vs Jupyter Notebook
 
 Jupyter notebook allows you to access .ipynb files only, i.e. it will create a computational environment which stores your code, results, plots, texts etc. And here you can work only in one of your environment. But Jupyter Lab gives a better user interface along with all the facilties provided by the notebook. It has a modular structure where one can access .py, .ipynb, html or markdown files, access filebrowser, all in the same window. 
