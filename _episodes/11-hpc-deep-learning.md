@@ -12,7 +12,7 @@ keypoints:
 - "XXXXXXXXXX" 
 ---
 
-# Connecting to UH-HPC cluster Mana (SSH vs OOD)
+## Connecting to UH-HPC cluster Mana (SSH vs OOD)
 
 On logging into a cluster, you are into a login node which has limited storage and restricted use because it is being shared by everybody so you submit your jobs to a compute node to get required resources for your research work. These compute nodes have lots of storage. There are 2 ways to access the cluster:
 1. Using Secure Shell (SSH)
@@ -28,10 +28,38 @@ On logging into a cluster, you are into a login node which has limited storage a
   
 ## Jupyter Lab vs Jupyter Notebook
 
- Jupyter notebook allows you to access only .ipynb files, i.e. it will create a computational environment which stores your code, results, plots, texts etc. And here you can work only in one of your environment. But Jupyter Lab gives a better user interface along with all the facilties provided by the notebook. It has a modular structure where one can access .py, .ipynb, html or markdown files, access filebrowser, all in the same window. 
+Jupyter notebook allows you to access .ipynb files only, i.e. it will create a computational environment which stores your code, results, plots, texts etc. And here you can work only in one of your environment. But Jupyter Lab gives a better user interface along with all the facilties provided by the notebook. It has a modular structure where one can access .py, .ipynb, html or markdown files, access filebrowser, all in the same window. 
+  
+### Jupyter Lab
+It is a flexible, web based application which is mainly used in data science and machine learning research. It gives you acess to file browser (to upload, download, copy, rename, delete files), do data visualization, add data, code, texts, equations all in one place, use big data tools etc. It supports more than 40 programming languages and has an interactive output. It also allows you to share your work.
+
+**Q. How does it work?**
+You write your code or comments/text in rectangular “cells” and the browser then passes it to the back-end “kernel” which runs your code and returns output.
+
   
  > .ipynb file is a python notebook which stores code, text, markdown, plots, results in a specific format but .py file is a python file which only stores code and plain text (like comments etc).
+  
+  
+## How to access and install softwares and modules on cluster?
+  
+### Package Managers:
+Software packages already installed on the cluster which we can use to install required libraries, softwares and can even choose which version to install.
+You can use following commands to see what modules are available on the cluster or which ones are already loaded or to load a specific module in your environment:
+'''
+  module avail
+  module list 
+  module load <MODULE_NAME>
+'''
+'Note: package contains all the files you need for a module'
+  
+1. Anaconda (or Conda): cross platform package and environment manager and may also access C, C++ libraries, R package for scientific computing along with Python.
+2. Pip: tool to install Python software packages only. 
 
-
+## Anaconda
+- allows you to install softwares written in any programming language,
+- flexibility to create different environments with different software versions,
+- can use both CLI and GUI
+  
+> If you try to access a library with different version based on your project, pip may throw an error. To create isolated environments you can use virtual environment (venv) with pip.
 
 {% include links.md %}
