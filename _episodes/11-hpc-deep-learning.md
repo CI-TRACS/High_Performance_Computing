@@ -20,7 +20,7 @@ On logging into a cluster, you are into a login node which has limited storage a
    - login using **ssh <username>@mana.its.hawaii.edu**,
    - works with weak connections too.
   
-  <img src="fig/CLI.png" width="300" height="400">
+  <img src="/fig/CLI.png" width="300" height="400">
   
 2. Open On Demand (OOD)
    - a web based interface (or graphical user interface (GUI),
@@ -28,7 +28,7 @@ On logging into a cluster, you are into a login node which has limited storage a
    - use interactive apps like Jupyter, RStudio and even Linux shell,
    - easy access to file systems as well.
   
- <img src="fig/MANA.png" width="300" height="400">
+ <img src="/fig/MANA.png" width="300" height="400">
                                              
   
 ## Jupyter Lab vs Jupyter Notebook
