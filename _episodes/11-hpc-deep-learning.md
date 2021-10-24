@@ -34,6 +34,7 @@ Jupyter notebook allows you to access .ipynb files only, i.e. it will create a c
 It is a flexible, web based application which is mainly used in data science and machine learning research. It gives you acess to file browser (to upload, download, copy, rename, delete files), do data visualization, add data, code, texts, equations all in one place, use big data tools etc. It supports more than 40 programming languages and has an interactive output. It also allows you to share your work.
 
 **Q. How does it work?**
+  
 You write your code or comments/text in rectangular “cells” and the browser then passes it to the back-end “kernel” which runs your code and returns output.
 
   
