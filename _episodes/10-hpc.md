@@ -90,8 +90,39 @@ smaller files, text editing, SSH terminal, and submitting interactive applicatio
 on a compute node, Jupyter Lab and Rstudio.
 <img src="../fig/MANA.png" width="500" height="400">
 
+> ### Login to Mana using Open onDemand
+> > ### Use an incognito or private browsing window
+> > 
+> > For security it is recommend you use a private browsing window with OOD as this allows a complete
+> > log out by just simplying closing the window.  While logout does exist in OOD, it may not work as
+> > expected and really keep you logged in even after hitting logout.
+> {:.callout}
+> > ### Browser choice
+> > 
+> > While almost any modern browser should work with OOD, the developers recommend google chrome as it has the widest support
+> > for the tools used to create OOD
+> {:.callout}
+> 
+> * Open up your web browser and start a private browsing window.  Now, connect to the instance of Open OnDemand used with Mana by
+> pointing your browser at [https://mana.its.hawaii.edu](https://mana.its.hawaii.edu). 
+{: .challenge}
+
 ### file browsing and editing
- <img src="../fig/ood_file_edit.png" width="500" height="400"> 
+The file browser allows you to perform directory manipulation, create new files, upload and download files without having to know the command line.
+The file browser can even has the ability to do text editing on files 
+which is useful if you are not familiar with a command line text editor.
+> ## Command line text editors
+>
+> Common text editors you find on HPC systems or linx systems include:
+> * [Vi/Vim](https://www.vim.org/)
+> * [Emacs](https://www.gnu.org/software/emacs/)
+> * [nano](https://www.nano-editor.org/)
+> Of the three, nano is the simplest to use
+{: .callout}
+<img src="../fig/ood_file_edit.png" width="500" height="400"> 
+
+
+ 
 ### Terminal in the browser
   <img src="../fig/ood_shell.png" width="500" height="400">
 ### Interactive applications
