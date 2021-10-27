@@ -1,137 +1,98 @@
 ---
-title: "What is High Performance Computing (HPC)"
+title: "Connecting to a remote HPC System"
 teaching: 20
 exercises: 0
 questions:
-- "What is an HPC system?"
-- "How does an HPC system work?"
+- "How do I log in to a remote HPC system?"
+- "What is Open OnDemand and how do I use it?"
 objectives:
-- "Understand the general HPC system architecture."
+- "Understand how to connect to an HPC system"
+- "Understand basics of Open OnDemand"
 keypoints:
-- "High Performance Computing (HPC) typically involves connecting to very large computing systems elsewhere in the world."
-- "These systems can be used to do work that would either be impossible or much slower on smaller systems."
-- "HPC is typically not designed for persistent process."
-- "Open OnDemand can be a transition from completely CLI and the GUI."
+- "SSH is the main method of connecting to HPC systems"
+- "Alternative tools like Open OnDemand exist to access HPC systems"
 ---
 
+## Connecting to a Remote HPC system
+The first step in using a cluster is to establish a connection from our laptop
+to the cluster. When we are sitting at a computer (or standing, or holding it
+in our hands or on our wrists), we have come to expect a visual display with
+icons, widgets, and perhaps some windows or applications: a graphical user
+interface, or GUI. Since computer clusters are remote resources that we connect
+to over often slow or laggy interfaces (WiFi and VPNs especially), it is more
+practical to use a command-line interface, or CLI, in which commands and
+results are transmitted via text, only. Anything other than text (images, for
+example) must be written to disk and opened with a separate program.
 
-## What Is an HPC System?
+If you have ever opened the Windows Command Prompt or macOS Terminal, you have
+seen a CLI. If you have already taken The Carpentries' courses on the UNIX
+Shell or Version Control, you have used the CLI on your local machine somewhat
+extensively. The only leap to be made here is to open a CLI on a *remote*
+machine, while taking some precautions so that other folks on the network can't
+see (or change) the commands you're running or the results the remote machine
+sends back. We will use the Secure SHell protocol (or SSH) to open an encrypted
+network connection between two machines, allowing you to send & receive text
+and data without having to worry about prying eyes.
 
-The words "cloud", "cluster", and the phrase "high-performance computing" or
-"HPC" are used a lot in different contexts and with various related meanings.
-So what do they mean? And more importantly, how do we use them in our work?
+{% include figure.html url="" max-width="50%"
+   file="/fig/connect-to-remote.svg"
+   alt="Connect to cluster" caption="" %}
 
-The *cloud* is a generic term commonly used to refer to computing resources
-that are a) *provisioned* to users on demand or as needed and b) represent real
-or *virtual* resources that may be located anywhere on Earth. For example, a
-large company with computing resources in Brazil, Zimbabwe and Japan may manage
-those resources as its own *internal* cloud and that same company may also
-use commercial cloud resources provided by Amazon or Google. Cloud
-resources may refer to machines performing relatively simple tasks such as
-serving websites, providing shared storage, providing web services (such as
-e-mail or social media platforms), as well as more traditional compute
-intensive tasks such as running a simulation.
 
-The term *HPC system*, on the other hand, describes a stand-alone resource for
-computationally intensive workloads. They are typically comprised of a
-multitude of integrated processing and storage elements, designed to handle
-high volumes of data and/or large numbers of floating-point operations
-([FLOPS](https://en.wikipedia.org/wiki/FLOPS)) with the highest possible
-performance. For example, all of the machines on the
-[Top-500](https://www.top500.org) list are HPC systems. To support these
-constraints, an HPC resource must exist in a specific, fixed location:
-networking cables can only stretch so far, and electrical and optical signals
-can travel only so fast.
+## Traditional HPC system access using Secure Shell (SSH)
 
-The word "cluster" is often used for small to moderate scale HPC resources less
-impressive than the [Top-500](https://www.top500.org). Clusters are often
-maintained in computing centers that support several such systems, all sharing
-common networking and storage to support common compute intensive tasks.
+Most modern computers have a built in SSH client to their terminal.
+Alternative clients exist, primarily for windows or add-ons to web browsers, 
+but they all operate in a similar manner. SSH clients are usually command-line tools, where you 
+provide the remote machine address as the only required argument. 
+If your username on the remote system differs from what
+you use locally, you must provide that as well. If your SSH client has a
+graphical front-end, such as PuTTY, MobaXterm, you will set these arguments
+before clicking "connect." From the terminal, you'll write something like `ssh
+userName@hostname`, where the "@" symbol is used to separate the two parts of a
+single argument.
 
-> ## What else is an HPC system good for
+### Example of ssh on the Linux command line, Mac OS terminal and windows 10 terminal 
+```
+ssh dav@mana.its.hawaii.edu
+```
+{: .language-bash}
+
+<img src="../fig/CLI.png" width="500" height="400" />
+
+> ## Take note
 >
-> While HPC is typically seen as where you go if you have large problems, HPC 
-> clusters can be used for even smaller cases where a single server is all that you need,
-> or you have a reserach problem in which the task is very short, but you need to do tens 
-> of thousands of iterations, which is typically known as 
-> [High Throughput Computing (HTC)](https://en.wikipedia.org/wiki/High-throughput_computing).
+> You would replace `dav` with your username. 
+> You may be asked for your password. Watch out: the
+> characters you type after the password prompt are not displayed on the screen.
+> Normal output will resume once you press `Enter`.
 {: .callout}
 
-## Nodes
-Individual computers that compose a cluster are typically called *nodes*
-(although you will also hear people call them *servers*, *computers* and
-*machines*). On a cluster, there are different types of nodes for different
-types of tasks.
+## Open OnDemand (OOD) - An alternative to using SSHC
 
-### What's in a Node?
-
-All of the nodes in an HPC system have the same components as your own laptop
-or desktop: *CPUs* (sometimes also called *processors* or *cores*), *memory*
-(or *RAM*), and *disk* space. CPUs are a computer's tool for actually running
-programs and calculations. Information about a current task is stored in the
-computer's memory. Disk refers to all storage that can be accessed like a file
-system. This is generally storage that can hold data permanently, i.e. data is
-still there even if the computer has been restarted. While this storage can be
-local (a hard drive installed inside of it), it is more common for nodes to
-connect to a shared, remote fileserver or cluster of servers.
-
-{% include figure.html url="" max-width="40%"
-   file="/fig/node_anatomy.png"
-   alt="Node anatomy" caption="" %}
-
-
-### Login Nodes
-Serves as an access point to the cluster. As a gateway, 
-it issuited for uploading and downloading files. 
-
-### Data Transfer Nodes
-If you want to transfer larger amounts of data to or from a cluster, some
-systems offer dedicated nodes for data transfers only. The motivation for
-this lies in the fact that larger data transfers should not obstruct
-operation of the login node. As a rule of thumb, consider all transfers of 
-a volume larger than 500 MB to 1 GB as large. But these numbers change, 
-e.g., depending on the network connection of yourself and of your cluster 
-or other factors.
-> ## Data transfer nodes on Mana
+While, SSH is a common method to connect to remote systems (HPC or even servers), tools that provide
+the same functionality and more exist.  One such tool is Open OnDemand (OOD).
+> ## Learn more about OOD
 >
-> Mana has two such 
-> [data transfer nodes](https://www.hawaii.edu/bwiki/display/HPC/Data+transfer+Questions) 
-> that are available for use.
-{: .callout}
-
-### Compute Nodes
-The real work on a cluster gets done by the *compute* (or *worker*) *nodes*.
-Compute nodes come in many shapes and sizes, but generally are dedicated to long
-or hard tasks that require a lot of computational resources.
-
-> ## Differences Between Compute Nodes
+> Created by Ohio Supercomputer Center, U. of Buffalo CCR, and Virginia Tech
+> and development funded by National Science Foundation under 
+> grant numbers 1534949 and 1835725. [Learn more about Open OnDemand](http://openondemand.org/)
 >
-> Many HPC clusters have a variety of nodes optimized for particular workloads.
-> Some nodes may have larger amount of memory, or specialized resources such as
-> Graphical Processing Units (GPUs).
 {: .callout}
 
-All interaction with the compute nodes is handled by a specialized piece of
-software called a scheduler.
-> ## Mana scheduler 
->
-> Mana utilizes a scheduler known as the 
-> [Slurm Workload Manager](https://slurm.schedmd.com/overview.html).
-{: .callout}
+### Features of Open OnDemand
 
+Open OnDemand works with a web browser making it possible to connect to an HPC system like Mana
+with almost any device.  It has built in functionality for file browser, uploading and downloading 
+smaller files, text editing, SSH terminal, and submitting interactive applications such as a Desktop 
+on a compute node, Jupyter Lab and Rstudio.
+ <img src="../fig/MANA.png" width="500" height="400">
 
-### Support nodes
-There are also specialized machines used for managing disk storage, user
-authentication, and other infrastructure-related tasks. Although we do not
-typically logon to or interact with these machines directly, they enable a
-number of key features like ensuring our user account and files are available
-throughout the HPC system.
-
-
-
-> Material used and modfied from the 
-> ["Introduction to High-Performance Computing" Incubator workshop](https://carpentries-incubator.github.io/hpc-intro/).
-{: .callout}
+### file browsing and editing
+ 
+### Terminal in the browser
+ 
+### Interactive applications
 
 
 {% include links.md %}
