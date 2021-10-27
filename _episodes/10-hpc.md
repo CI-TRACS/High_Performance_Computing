@@ -68,7 +68,7 @@ ssh dav@mana.its.hawaii.edu
 > Normal output will resume once you press `Enter`.
 {: .callout}
 
-## Open OnDemand (OOD) - An alternative to using SSHC
+## Open OnDemand (OOD) - An alternative to using SSH
 
 While, SSH is a common method to connect to remote systems (HPC or even servers), tools that provide
 the same functionality and more exist.  One such tool is Open OnDemand (OOD).
