@@ -58,7 +58,9 @@ ssh dav@mana.its.hawaii.edu
 ```
 {: .language-bash}
 
-<img src="../fig/CLI.png" width="500" height="400" />
+{% include figure.html url="" max-width="50%"
+   file="/fig/CLI.png"
+   alt="Connect to cluster" caption="" %}
 
 > ## Take note
 >
@@ -86,13 +88,15 @@ Open OnDemand works with a web browser making it possible to connect to an HPC s
 with almost any device.  It has built in functionality for file browser, uploading and downloading 
 smaller files, text editing, SSH terminal, and submitting interactive applications such as a Desktop 
 on a compute node, Jupyter Lab and Rstudio.
- <img src="../fig/MANA.png" width="500" height="400">
+<img src="../fig/MANA.png" width="500" height="400">
 
 ### file browsing and editing
- 
+ <img src="../fig/ood_file_edit" width="500" height="400"> 
 ### Terminal in the browser
- 
+  <img src="../fig/ood_shell.png" width="500" height="400">
 ### Interactive applications
-
+ <img src="../fig/ood_interact.png" width="500" height="400"> 
+ <img src="../fig/ood_form.png" width="500" height="400"> 
+ <img src="../fig/ood_job.png" width="500" height="400">
 
 {% include links.md %}
