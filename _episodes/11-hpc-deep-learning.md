@@ -86,6 +86,23 @@ You can use following commands to see what modules are available on the cluster 
 {: .challenge} 
   
 ## Deep Learning Tutorial
+
+This is a basic image classification tutorial from CIFAR-10 dataset using tensorflow. 
+  
+**Q. What is CIFAR-10 dataset?**
+  
+CIFAR-10 is a common dataset used for machine learning and computer vision research. It is a subset of 80 million tiny image dataset and consists of 60,000 images. The images are labelled with 10 different classes. So each class has 5000 training images and 1000 test images. Each row represents a color image of 32 x 32 pixels with 3 channels (RGB).   
+ 
+```
+ What is Tensorflow? It is an open source software used in machine learning particularly for training neural networks. We'll define our model using 'Keras'- a high level API which acts as an interface between tensorflow and python and makes it easy to build and train models.
+```
+  
+> **Q. But what is HDF5 and why use HDF5 file format?**
+> 
+> CIFAR-10 dataset is a comparatively smaller dataset as compared to other real-life datasets which are used in AI research. And this where Hierarchical Data Format (HDF5) comes in play as it supports large, complex file system.
+  
+
+
   
 
 
