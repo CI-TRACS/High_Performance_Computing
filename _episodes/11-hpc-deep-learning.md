@@ -89,7 +89,7 @@ You can use following commands to see what modules are available on the cluster 
 
 This is a basic image classification tutorial from CIFAR-10 dataset using tensorflow. 
   
-###**Q. What is CIFAR-10 dataset?**
+### **Q. What is CIFAR-10 dataset?**
   
 CIFAR-10 is a common dataset used for machine learning and computer vision research. It is a subset of 80 million tiny image dataset and consists of 60,000 images. The images are labelled with 10 different classes. So each class has 5000 training images and 1000 test images. Each row represents a color image of 32 x 32 pixels with 3 channels (RGB).   
   
