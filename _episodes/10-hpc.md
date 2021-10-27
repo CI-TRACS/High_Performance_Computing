@@ -91,7 +91,7 @@ on a compute node, Jupyter Lab and Rstudio.
 <img src="../fig/MANA.png" width="500" height="400">
 
 ### file browsing and editing
- <img src="../fig/ood_file_edit" width="500" height="400"> 
+ <img src="../fig/ood_file_edit.png" width="500" height="400"> 
 ### Terminal in the browser
   <img src="../fig/ood_shell.png" width="500" height="400">
 ### Interactive applications
