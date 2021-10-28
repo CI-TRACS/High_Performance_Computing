@@ -91,6 +91,7 @@ on a compute node, Jupyter Lab and Rstudio.
 <img src="../fig/MANA.png" width="500" height="400">
 
 > ### Login to Mana using Open onDemand
+>
 > > ### Use an incognito or private browsing window
 > > 
 > > For security it is recommend you use a private browsing window with OOD as this allows a complete
@@ -100,8 +101,8 @@ on a compute node, Jupyter Lab and Rstudio.
 > > ### Browser choice
 > > 
 > > While almost any modern browser should work with OOD, the developers recommend google chrome as it has the widest support
-> > for the tools used to create OOD
-> {:.callout}
+> > for the tools used to create OOD [browser requirements](https://osc.github.io/ood-documentation/latest/requirements.html#browser-requirements)
+> {: .callout}
 > 
 > * Open up your web browser and start a private browsing window.  Now, connect to the instance of Open OnDemand used with Mana by
 > pointing your browser at [https://mana.its.hawaii.edu](https://mana.its.hawaii.edu). 
