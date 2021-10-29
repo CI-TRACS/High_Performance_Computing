@@ -99,7 +99,7 @@ on a compute node, Jupyter Lab and Rstudio.
 {: .callout}
 
 {% include figure.html url="" max-width="50%"
-   file="/fig/MANA.png"
+   file="/fig/ood_landing.png"
    alt="Connect to cluster" caption="" %}
 
 
