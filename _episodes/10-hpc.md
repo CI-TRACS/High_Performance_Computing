@@ -143,7 +143,7 @@ As Open OnDemand doesn't really replace the traditional commandline/SSH access m
 and instead makes the use of certain applications simpler, it still provides a way to bring up a commandline
 on an HPC system within your web browser.  
   {% include figure.html url="" max-width="50%"
-   file="/fig/ood_shell.png"
+   file="/fig/ood_shell_merged.png"
    alt="Connect to cluster" caption="" %}
 
 
