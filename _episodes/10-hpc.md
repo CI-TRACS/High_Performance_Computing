@@ -98,7 +98,7 @@ on a compute node, Jupyter Lab and Rstudio.
 >
 {: .callout}
 
-{% include figure.html url="" max-width="50%"
+{% include figure.html url="" max-width="75%"
    file="/fig/ood_landing.png"
    alt="Connect to cluster" caption="" %}
 
@@ -133,7 +133,7 @@ which is useful if you are not familiar with a command line text editor.
 > Of the three, nano is the simplest to use
 >
 {: .callout}
-{% include figure.html url="" max-width="50%"
+{% include figure.html url="" max-width="75%"
    file="/fig/ood_file_edit.png"
    alt="Connect to cluster" caption="" %}
 
@@ -142,7 +142,7 @@ which is useful if you are not familiar with a command line text editor.
 As Open OnDemand doesn't really replace the traditional commandline/SSH access method to HPC systems,
 and instead makes the use of certain applications simpler, it still provides a way to bring up a commandline
 on an HPC system within your web browser.  
-  {% include figure.html url="" max-width="50%"
+  {% include figure.html url="" max-width="80%"
    file="/fig/ood_shell_merged.png"
    alt="Connect to cluster" caption="" %}
 
@@ -151,7 +151,7 @@ on an HPC system within your web browser.
 ### Interactive applications
  While Open OnDemand can allow you to access HPC systems using the terminal, it also has the ability to expand the ways
  and HPC can be easily used though allowing the use of interactive applications that many have come to depend on.
-  {% include figure.html url="" max-width="50%"
+  {% include figure.html url="" max-width="75%"
    file="/fig/ood_interact.png"
    alt="Connect to cluster" caption="" %}
 
@@ -163,7 +163,7 @@ It also has the ability to email you once your job starts as not all jobs will b
 
 Finally, when a job begins, it presents you with a button you can click to start up your interactive application and use it within your 
 browser.
-  {% include figure.html url="" max-width="50%"
+  {% include figure.html url="" max-width="100%"
    file="/fig/ood_job.png"
    alt="Connect to cluster" caption="" %}
 
