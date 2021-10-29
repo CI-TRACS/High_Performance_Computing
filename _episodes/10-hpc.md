@@ -9,8 +9,8 @@ objectives:
 - "Understand how to connect to an HPC system"
 - "Understand basics of Open OnDemand"
 keypoints:
-- "SSH is the main method of connecting to HPC systems"
-- "Alternative tools like Open OnDemand exist to access HPC systems"
+- "SSH is the traditional method of connecting to HPC systems"
+- "Alternative tools like Open OnDemand exist to enhance the utility of and simplify the access to an HPC system"
 ---
 
 ## Connecting to a Remote HPC system
