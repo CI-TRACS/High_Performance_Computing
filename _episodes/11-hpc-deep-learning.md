@@ -17,7 +17,7 @@ As we previously saw, Open OnDemand allows us to use interactive applications, o
   {% include figure.html url="" max-width="50%"
    file="/fig/ood_form.png"
    alt="Connect to cluster" caption="" %}
-The form is used to specify what resources you want, which are then placed into a queue of other jobs and will start to runs
+The form is used to specify what resources you want, which are then placed into a queue with other waiting jobs and will start to run your job 
 as soon as the resources requested are available.  
 > ## Under the hood
 > 
