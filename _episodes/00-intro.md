@@ -1,6 +1,6 @@
 ---
 title: "What is High Performance Computing (HPC)"
-teaching: 20
+teaching: 10
 exercises: 0
 questions:
 - "What is an HPC system?"
