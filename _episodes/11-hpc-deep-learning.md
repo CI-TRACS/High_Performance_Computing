@@ -12,22 +12,31 @@ keypoints:
 - "XXXXXXXXXX" 
 ---
 
-## Connecting to UH-HPC cluster Mana (SSH vs OOD)
-
-On logging into a cluster, you are into a login node which has limited storage and restricted use because it is being shared by everybody so you submit your jobs to a compute node to get required resources for your research work. There are 2 ways to access these compute nodes on the cluster:
-1. Using Secure Shell (SSH)
-   - done using Linux like commands in terminal (also known as Command Line Interface or CLI),
-   - login using **ssh <username>@mana.its.hawaii.edu**
-  
-  <img src="../fig/CLI.png" width="500" height="400">
-  
-2. Open On Demand (OOD)
-   - a web based interface (or graphical user interface (GUI),
-   - easy to access,
-   - use interactive apps like Jupyter, RStudio and even Linux shell,
-   - easy access to file systems as well.
-  
- <img src="../fig/MANA.png" width="500" height="400">
+## Jupyuter Lab as an Interactive Application in Open OnDemand
+As we previously saw, Open OnDemand allows us to use interactive applications, one of which is Juypter Lab.
+  {% include figure.html url="" max-width="50%"
+   file="/fig/ood_form.png"
+   alt="Connect to cluster" caption="" %}
+The form is used to specify what resources you want, which are then placed into a queue of other jobs and will start to runs
+as soon as the resources requested are available.  
+> ## Under the hood
+> 
+> While we do not cover what is under the hood, this form define a job script passed to the HPC systems job scheduler, leaving the
+> hard work of writing the script on your behalf to Open OnDemand. 
+>
+{: .callout}
+                                             
+> ## Starting an Interactive session of Jupyter Lab
+> As we will be working in Jupyter Lab to explore some concepts when working with HPC systems and deep learning your challenge is to 
+> start an interactive application of Jupyter Lab with the following parameters
+> * Partition: workshop
+> * Number of hours: 5
+> * Number of cores: 6
+> * GB of Ram: 20 GB
+> * Number of GPUs requested: 1
+> * GPU Type: Any
+>
+{: .challenge}                                             
                                              
   
 ## Jupyter Lab vs Jupyter Notebook
@@ -43,6 +52,8 @@ You write your code or plain text in rectangular “cells” and the browser the
 
 `Note: .ipynb file is a python notebook which stores code, text, markdown, plots, results in a specific format but .py file is a python file which only stores 
  code and plain text (like comments etc).`  
+
+
   
 ## How to access and install softwares and modules on cluster?
   
