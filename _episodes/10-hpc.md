@@ -68,6 +68,7 @@ ssh dav@mana.its.hawaii.edu
 > You may be asked for your password. Watch out: the
 > characters you type after the password prompt are not displayed on the screen.
 > Normal output will resume once you press `Enter`.
+> 
 {: .callout}
 
 ## Open OnDemand (OOD) - An alternative to using SSH
@@ -88,6 +89,12 @@ Open OnDemand works with a web browser making it possible to connect to an HPC s
 with almost any device.  It has built in functionality for file browser, uploading and downloading 
 smaller files, text editing, SSH terminal, and submitting interactive applications such as a Desktop 
 on a compute node, Jupyter Lab and Rstudio.
+> ### Interactive applications at other institutions
+>
+> Various other interactive applications have been made for Open OnDemand but are not available by default.
+> See [here](https://osc.github.io/ood-documentation/master/install-ihpc-apps.html#) for a list of known interact appilications. 
+>
+{: .callout}
 <img src="../fig/MANA.png" width="500" height="400">
 
 > ### Login to Mana using Open onDemand
@@ -97,15 +104,18 @@ on a compute node, Jupyter Lab and Rstudio.
 > > For security it is recommend you use a private browsing window with OOD as this allows a complete
 > > log out by just simplying closing the window.  While logout does exist in OOD, it may not work as
 > > expected and really keep you logged in even after hitting logout.
+> >
 > {:.callout}
 > > ### Browser choice
 > > 
 > > While almost any modern browser should work with OOD, the developers recommend google chrome as it has the widest support
 > > for the tools used to create OOD [browser requirements](https://osc.github.io/ood-documentation/latest/requirements.html#browser-requirements)
+> >
 > {: .callout}
 > 
 > * Open up your web browser and start a private browsing window.  Now, connect to the instance of Open OnDemand used with Mana by
 > pointing your browser at [https://mana.its.hawaii.edu](https://mana.its.hawaii.edu). 
+>
 {: .challenge}
 
 ### file browsing and editing
@@ -119,16 +129,29 @@ which is useful if you are not familiar with a command line text editor.
 > * [Emacs](https://www.gnu.org/software/emacs/)
 > * [nano](https://www.nano-editor.org/)
 > Of the three, nano is the simplest to use
+>
 {: .callout}
 <img src="../fig/ood_file_edit.png" width="500" height="400"> 
-
-
  
 ### Terminal in the browser
+As Open OnDemand doesn't really replace the traditional commandline/SSH access method to HPC systems,
+and instead makes the use of certain applications simpler, it still provides a way to bring up a commandline
+on an HPC system within your web browser.  
   <img src="../fig/ood_shell.png" width="500" height="400">
+
 ### Interactive applications
+ While Open OnDemand can allow you to access HPC systems using the terminal, it also has the ability to expand the ways
+ and HPC can be easily used though allowing the use of interactive applications that many have come to depend on.
  <img src="../fig/ood_interact.png" width="500" height="400"> 
+
+Each application has a form which you use to define the resources your job requires so that Open OnDemand can submit it on your behalf.
+It also has the ability to email you once your job starts as not all jobs will begin immediately.
  <img src="../fig/ood_form.png" width="500" height="400"> 
+
+Finally, when a job begins, it presents you with a button you can click to start up your interactive application and use it within your 
+browser.
  <img src="../fig/ood_job.png" width="500" height="400">
+
+
 
 {% include links.md %}
