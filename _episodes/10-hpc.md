@@ -99,21 +99,18 @@ on a compute node, Jupyter Lab and Rstudio.
    file="/fig/MANA.png"
    alt="Connect to cluster" caption="" %}
 
-> ### Login to Mana using Open onDemand
+> ## Login to Mana using Open onDemand
 >
-> > ### Use an incognito or private browsing window
+> > ## Browser choice and using an incognito or private browsing window
 > > 
+> > While almost any modern browser should work with OOD, the developers recommend google chrome as it has the widest support
+> > for the tools used to create OOD [browser requirements](https://osc.github.io/ood-documentation/latest/requirements.html#browser-requirements)
+> >
 > > For security it is recommend you use a private browsing window with OOD as this allows a complete
 > > log out by just simplying closing the window.  While logout does exist in OOD, it may not work as
 > > expected and really keep you logged in even after hitting logout.
 > >
 > {:.callout}
-> > ### Browser choice
-> > 
-> > While almost any modern browser should work with OOD, the developers recommend google chrome as it has the widest support
-> > for the tools used to create OOD [browser requirements](https://osc.github.io/ood-documentation/latest/requirements.html#browser-requirements)
-> >
-> {: .callout}
 > 
 > * Open up your web browser and start a private browsing window.  Now, connect to the instance of Open OnDemand used with Mana by
 > pointing your browser at [https://mana.its.hawaii.edu](https://mana.its.hawaii.edu). 
