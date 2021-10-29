@@ -75,6 +75,7 @@ ssh dav@mana.its.hawaii.edu
 
 While, SSH is a common method to connect to remote systems (HPC or even servers), tools that provide
 the same functionality and more exist.  One such tool is Open OnDemand (OOD).
+
 > ## Learn more about OOD
 >
 > Created by Ohio Supercomputer Center, U. of Buffalo CCR, and Virginia Tech
@@ -89,12 +90,14 @@ Open OnDemand works with a web browser making it possible to connect to an HPC s
 with almost any device.  It has built in functionality for file browser, uploading and downloading 
 smaller files, text editing, SSH terminal, and submitting interactive applications such as a Desktop 
 on a compute node, Jupyter Lab and Rstudio.
-> ### Interactive applications at other institutions
+
+> ## Interactive applications at other institutions
 >
 > Various other interactive applications have been made for Open OnDemand but are not available by default.
 > See [here](https://osc.github.io/ood-documentation/master/install-ihpc-apps.html#) for a list of known interact appilications. 
 >
 {: .callout}
+
 {% include figure.html url="" max-width="50%"
    file="/fig/MANA.png"
    alt="Connect to cluster" caption="" %}
@@ -110,7 +113,7 @@ on a compute node, Jupyter Lab and Rstudio.
 > > log out by just simplying closing the window.  While logout does exist in OOD, it may not work as
 > > expected and really keep you logged in even after hitting logout.
 > >
-> {:.callout}
+> {: .callout}
 > 
 > * Open up your web browser and start a private browsing window.  Now, connect to the instance of Open OnDemand used with Mana by
 > pointing your browser at [https://mana.its.hawaii.edu](https://mana.its.hawaii.edu). 
