@@ -12,7 +12,7 @@ keypoints:
 - "XXXXXXXXXX" 
 ---
 
-## Jupyuter Lab as an Interactive Application in Open OnDemand
+## Jupyter Lab as an Interactive Application in Open OnDemand
 As we previously saw, Open OnDemand allows us to use interactive applications, one of which is Juypter Lab.
   {% include figure.html url="" max-width="50%"
    file="/fig/ood_form.png"
