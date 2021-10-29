@@ -71,7 +71,7 @@ ssh dav@mana.its.hawaii.edu
 > 
 {: .callout}
 
-## Open OnDemand (OOD) - An alternative to using SSH
+## Open OnDemand - An alternative to using SSH
 
 While, SSH is a common method to connect to remote systems (HPC or even servers), tools that provide
 the same functionality and more exist.  One such tool is Open OnDemand (OOD).
@@ -106,10 +106,10 @@ on a compute node, Jupyter Lab and Rstudio.
 > ## Browser choice and using an incognito or private browsing window
 > 
 > While almost any modern browser should work with OOD, the developers recommend google chrome as it has the widest support
-> for the tools used to create OOD [browser requirements](https://osc.github.io/ood-documentation/latest/requirements.html#browser-requirements)
+> for the tools used to create Open OnDemand. [browser requirements](https://osc.github.io/ood-documentation/latest/requirements.html#browser-requirements)
 >
-> For security it is recommend you use a private browsing window with OOD as this allows a complete
-> log out by just simplying closing the window.  While logout does exist in OOD, it may not work as
+> For security it is recommend you use a private browsing window with Open OnDemand as this allows a complete
+> log out by just simplying closing the window.  While logout does exist in Open OnDemand, it may not work as
 > expected and really keep you logged in even after hitting logout.
 {: .callout}
 
