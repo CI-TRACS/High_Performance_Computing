@@ -27,6 +27,7 @@ as soon as the resources requested are available.
 {: .callout}
                                              
 > ## Starting an Interactive session of Jupyter Lab
+>
 > As we will be working in Jupyter Lab to explore some concepts when working with HPC systems and deep learning your challenge is to 
 > start an interactive application of Jupyter Lab with the following parameters
 > * Partition: workshop
@@ -83,8 +84,8 @@ You can use following commands to see what modules are available on the cluster 
   
 ## Environment setup
 
-> ### **Challenge 1**
-  
+> ## Challenge 1
+>  
 > 1. Request for resources
 >
 > * Go to mana.its.hawaii.edu and sign-in using your UH credentials  
