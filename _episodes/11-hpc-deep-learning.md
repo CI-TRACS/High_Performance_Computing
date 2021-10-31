@@ -129,26 +129,71 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 5. Evaluate/test the model
 6. Improve your model
 
-> How to check if you're using CPU or GPU 
+> How to check if you're using GPU ?
 > ~~~
 > tf.config.list_physical_devices('GPU')
 > ~~~
-> Now, how would you check for CPU?
-> 
+> Now, how would you check for CPU ?
+>
+> > ### Solution
 > > ~~~
 > > tf.config.list_physical_devices('CPU')
 > > ~~~
 > {: .solution}
-
 {: .challenge}
 
-> ### Working with Cifar-10 dataset
+> ## Working with Cifar-10 dataset
 >
 > * Import all the relevant libraries
+> ~~~
+> import numpy as np
+> import matplotlib.pyplot as plt
+> 
+> import tensorflow as tf
+> import h5py
+>
+> import keras
+> from keras.datasets import cifar10
+> from tensorflow.keras.models import Sequential
+> from tensorflow.keras.layers import Dense, Conv2D, Flatten, MaxPooling2D, Input, InputLayer, Dropout
+> import keras.layers.merge as merge
+> from keras.layers.merge import Concatenate
+> from tensorflow.keras.utils import to_categorical
+> from tensorflow.keras.optimizers import SGD, Adam
+>
+> %matplotlib inline
+> ~~~
 > * Check for CPU and GPU
 > * Load the data and analyze its shape
+> ~~~
+> (x_train, y_train), (x_valid, y_valid) = cifar10.load_data()
+> nb_classes = 10
+> class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
+> print('Train: X=%s, y=%s' % (x_train.shape, y_train.shape))
+> print('Test: X=%s, y=%s' % (x_valid.shape, y_valid.shape))
+> print('number of classes= %s' %len(set(y_train.flatten())))
+> print(type(x_train))
+> ~~~
 > * Plot some examples 
+> ~~~
+> plt.figure(figsize=(8, 8)) 
+> for i in range(2*7):
+>     # define subplot
+>     plt.subplot(2, 7, i+1)
+>     plt.imshow(x_train [i])
+>     class_index = np.argmax(to_categorical(y_train[i], 10))
+>     plt.title(class_names[class_index], fontsize=9)
+> ~~~    
 > * Convert data to HDF5 format
+> ~~~
+> with h5py.File('dataset_cifar10.hdf5', 'w') as hf:
+>     dset_x_train = hf.create_dataset('x_train', data=x_train, shape=(50000, 32, 32, 3), compression='gzip', chunks=True)
+>     dset_y_train = hf.create_dataset('y_train', data=y_train, shape=(50000, 1), compression='gzip', chunks=True)
+>     dset_x_test = hf.create_dataset('x_valid', data=x_valid, shape=(10000, 32, 32, 3), compression='gzip', chunks=True)
+>     dset_y_test = hf.create_dataset('y_valid', data=y_valid, shape=(10000, 1), compression='gzip', chunks=True)
+> ~~~
+> * Define the model
+> 
 
 
 {% include links.md %}
