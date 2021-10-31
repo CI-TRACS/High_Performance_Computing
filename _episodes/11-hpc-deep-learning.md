@@ -129,7 +129,7 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 5. Evaluate/test the model
 6. Improve your model
 
-> How to check if you're using GPU ?
+> ### How to check if you're using GPU ?
 > ~~~
 > tf.config.list_physical_devices('GPU')
 > ~~~
@@ -145,13 +145,13 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > ## Working with Cifar-10 dataset
 >
 > * Import all the relevant libraries
+> 
 > ~~~
 > import numpy as np
 > import matplotlib.pyplot as plt
 > 
 > import tensorflow as tf
 > import h5py
->
 > import keras
 > from keras.datasets import cifar10
 > from tensorflow.keras.models import Sequential
@@ -160,11 +160,14 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > from keras.layers.merge import Concatenate
 > from tensorflow.keras.utils import to_categorical
 > from tensorflow.keras.optimizers import SGD, Adam
->
+> 
 > %matplotlib inline
 > ~~~
+> 
 > * Check for CPU and GPU
+> 
 > * Load the data and analyze its shape
+> 
 > ~~~
 > (x_train, y_train), (x_valid, y_valid) = cifar10.load_data()
 > nb_classes = 10
@@ -174,6 +177,7 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > print('number of classes= %s' %len(set(y_train.flatten())))
 > print(type(x_train))
 > ~~~
+> 
 > * Plot some examples 
 > ~~~
 > plt.figure(figsize=(8, 8)) 
