@@ -133,6 +133,7 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > ~~~
 > tf.config.list_physical_devices('GPU')
 > ~~~
+> 
 > Now, how would you check for CPU ?
 >
 > > ### Solution
@@ -179,6 +180,7 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > ~~~
 > 
 > * Plot some examples 
+> 
 > ~~~
 > plt.figure(figsize=(8, 8)) 
 > for i in range(2*7):
@@ -188,7 +190,9 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 >     class_index = np.argmax(to_categorical(y_train[i], 10))
 >     plt.title(class_names[class_index], fontsize=9)
 > ~~~    
+> 
 > * Convert data to HDF5 format
+> 
 > ~~~
 > with h5py.File('dataset_cifar10.hdf5', 'w') as hf:
 >     dset_x_train = hf.create_dataset('x_train', data=x_train, shape=(50000, 32, 32, 3), compression='gzip', chunks=True)
@@ -196,8 +200,159 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 >     dset_x_test = hf.create_dataset('x_valid', data=x_valid, shape=(10000, 32, 32, 3), compression='gzip', chunks=True)
 >     dset_y_test = hf.create_dataset('y_valid', data=y_valid, shape=(10000, 1), compression='gzip', chunks=True)
 > ~~~
+> 
 > * Define the model
 > 
+> ~~~
+> model = tf.keras.Sequential()
+> model.add(InputLayer(input_shape=[32, 32, 3]))
+>
+> model.add(Conv2D(filters=32, kernel_size=3, padding='same', activation='relu'))
+> model.add(MaxPooling2D(pool_size=[2,2], strides=[2, 2], padding='same'))
+>
+> model.add(Conv2D(filters=64, kernel_size=3, padding='same', activation='relu'))
+> model.add(MaxPooling2D(pool_size=[2,2], strides=[2, 2], padding='same'))
+>
+> model.add(Conv2D(filters=128, kernel_size=3, padding='same', activation='relu'))
+> model.add(MaxPooling2D(pool_size=[2,2], strides=[2, 2], padding='same'))
+>
+> model.add(Conv2D(filters=256, kernel_size=3, padding='same', activation='relu'))
+> model.add(MaxPooling2D(pool_size=[2,2], strides=[2, 2], padding='same'))
+>
+> model.add(Flatten())
+>
+> model.add(Dense(256, activation='relu'))
+> model.add(Dropout(0.2))
+>
+> model.add(Dense(512, activation='relu'))
+> model.add(Dropout(0.2))
+>
+> model.add(Dense(10, activation='softmax'))
+>
+> model.summary()
+> ~~~
+>
+> * Define the data generator
+>
+> ~~~
+> class DataGenerator(tf.keras.utils.Sequence):
+>    
+>     def __init__(self, batch_size, test=False, shuffle=True):
+>        
+>         PATH_TO_FILE = 'dataset_cifar10.hdf5'
+>        
+>         self.hf = h5py.File(PATH_TO_FILE, 'r')         
+>         self.batch_size = batch_size
+>         self.test = test
+>         self.shuffle = shuffle
+>        self.on_epoch_end()
+>
+>     def __del__(self):
+>         self.hf.close()
+>        
+>     def __len__(self):
+>         return int(np.ceil(len(self.indices) / self.batch_size))
+>
+>     def __getitem__(self, idx):
+>         start = self.batch_size * idx
+>         stop = self.batch_size * (idx+1)
+>        
+>         if self.test:
+>             x = self.hf['x_valid'][start:stop, ...]
+>             batch_x = np.array(x).astype('float32') / 255.0
+>             y = self.hf['y_valid'][start:stop]
+>             batch_y = to_categorical(np.array(y), 10)
+>         else:
+>             x = self.hf['x_train'][start:stop, ...]
+>             batch_x = np.array(x).astype('float32') / 255.0
+>             y = self.hf['y_train'][start:stop]
+>             batch_y = to_categorical(np.array(y), 10)
+>
+>         return batch_x, batch_y
+>
+>     def on_epoch_end(self):
+>         if self.test:
+>             self.indices = np.arange(self.hf['x_valid'][:].shape[0])
+>         else:
+>             self.indices = np.arange(self.hf['x_train'][:].shape[0])
+>            
+>         if self.shuffle:
+>             np.random.shuffle(self.indices)
+>  ~~~
+>
+> Generate batches of data for training and validation dataset
+>
+> ~~~
+> batchsize  = 250 
+> data_train = DataGenerator(batch_size=batchsize)
+> data_valid = DataGenerator(batch_size=batchsize, test=True, shuffle=False)
+> ~~~
+> 
+> First, let's train the model using CPU
+> ~~~
+> with tf.device('/device:CPU:0'):
+>     history = model.fit(data_train,epochs=10,
+>                         verbose=1, validation_data=data_valid)
+> ~~~
+>                         
+> Now, lets try with GPU to compare its performance with CPU
+>
+> ~~~
+> from tensorflow.keras.models import clone_model
+> new_model = clone_model(model)
+> opt = keras.optimizers.Adam(learning_rate=0.001)
+> new_model.compile(optimizer=opt, loss='categorical_crossentropy', metrics=['accuracy'])  
+> ~~~
+>                         
+> % train the new model with GPU
+> > ### Solution
+> > ~~~
+> > with tf.device('/device:GPU:0'):
+> >     new_history = new_model.fit(data_train,epochs=10,
+> >                                 verbose=1, validation_data=data_valid)
+> >  ~~~                               
+> {: .solution}
+>                                  
+> Plotting the losses and accuracy for training and validation set
+>
+> ~~~
+> fig, axes = plt.subplots(1,2, figsize=[16, 6])
+> axes[0].plot(history.history['loss'], label='train_loss')
+> axes[0].plot(history.history['val_loss'], label='val_loss')
+> axes[0].set_title('Loss')
+> axes[0].legend()
+> axes[0].grid()
+> axes[1].plot(history.history['accuracy'], label='train_acc')
+> axes[1].plot(history.history['val_accuracy'], label='val_acc')
+> axes[1].set_title('Accuracy')
+> axes[1].legend()
+> axes[1].grid()
+> ~~~
+>
+> Evaluate the model and make predictions
+> 
+> ~~~
+> x = x_valid.astype('float32') / 255.0
+> y = to_categorical(y_valid, 10)
+> score = new_model.evaluate(x, y, verbose=0)
+> print('Test cross-entropy loss: %0.5f' % score[0])
+> print('Test accuracy: %0.2f' % score[1])
+> 
+> y_pred = new_model.predict_classes(x)
+> ~~~
+> 
+> Plot the predictions
+>
+> ~~~
+> plt.figure(figsize=(8, 8)) 
+> for i in range(20):
+>     plt.subplot(4, 5, i+1)
+>     plt.imshow(x[i].reshape(32,32,3))
+>     index1 = np.argmax(y[i])
+>     plt.title("y: %s\np: %s" % (class_names[index1], class_names[y_pred[i]]), fontsize=9, loc='left')
+>     plt.subplots_adjust(wspace=0.5, hspace=0.4)
+>  ~~~   
+
 
 
 {% include links.md %}
