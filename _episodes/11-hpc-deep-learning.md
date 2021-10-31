@@ -330,7 +330,7 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > axes[1].grid()
 > ~~~
 >
-> Evaluate the model and make predictions
+> * Evaluate the model and make predictions
 > 
 > ~~~
 > x = x_valid.astype('float32') / 255.0
@@ -342,7 +342,7 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > y_pred = new_model.predict_classes(x)
 > ~~~
 > 
-> Plot the predictions
+> * Plot the predictions
 >
 > ~~~
 > plt.figure(figsize=(8, 8)) 
