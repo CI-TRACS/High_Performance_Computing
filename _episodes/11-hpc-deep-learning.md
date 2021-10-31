@@ -47,12 +47,12 @@ Jupyter notebook allows you to access .ipynb files only, i.e. it will create a c
 ### Jupyter Lab
 It is a flexible, web based application which is mainly used in data science and machine learning research. It gives you acess to file browser (to upload, download, copy, rename, delete files), do data visualization, add data, code, texts, equations all in one place, use big data tools, share your work with others. It supports more than 40 programming languages and has an interactive output. 
   
-**Q. How does it work?**
-  
-You write your code or plain text in rectangular “cells” and the browser then passes it to the back-end “kernel”, which runs your code and returns output.
+> **Q. How does it work?**
+>  
+>You write your code or plain text in rectangular “cells” and the browser then passes it to the back-end “kernel”, which runs your code and returns output.
 
-`Note: .ipynb file is a python notebook which stores code, text, markdown, plots, results in a specific format but .py file is a python file which only stores 
- code and plain text (like comments etc).`  
+`Note: .ipynb file is a python notebook which stores code, text, markdown, plots, results in a specific format but .py file is a python file which only 
+stores code and plain text (like comments etc).`  
 
 
   
@@ -82,19 +82,21 @@ You can use following commands to see what modules are available on the cluster 
   
 > If you try to access a library with different version based on your project, pip may throw an error. To create isolated environments you can use virtual environment (venv) with pip.
   
-## Environment setup
-
-> ## Challenge 1
+> ## Environment setup
 >  
-> 1. Request for resources
->
-> * Go to mana.its.hawaii.edu and sign-in using your UH credentials  
-> * Interactive Apps -> Jupyter Lab -> partition: gpu -> Time: 2 hours -> Nodes: 1 -> Tasks: 1 -> Cores: 2 -> RAM: 10 -> # of GPU: 1 -> GPU Type: any
-> * Launch the session and open Jupyter Notebook
->  
-> 2. Create a conda environment
->  
-> 3. Download libraries
+> 1. Create a conda environment
+> * module load lang/Anaconda3
+> * conda create --name tf2
+> * source activate tf2
+> 2. Download libraries
+> * conda install tensorflow-gpu
+> * conda install matplotlib
+> * conda install tensorflow
+> * conda install keras
+> 3. Get a python kernel
+> * conda install ipykernel
+> * python -m ipykernel install --user --name tf2 --display-name tf2
+> 
 {: .challenge} 
   
 ## Deep Learning Tutorial
@@ -121,6 +123,24 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 5. Evaluate/test the model
 6. Improve your model
 
+> How to check if you're using CPU or GPU 
+> ~~~
+> tf.config.list_physical_devices('GPU')
+> ~~~
+> Now, how would you check for CPU?
+> 
+> > tf.config.list_physical_devices('CPU')
+> {: .solution}
+
+{: .challenge}
+
+> ### Working with Cifar-10 dataset
+>
+> * Import all the relevant libraries
+> * Check for CPU and GPU
+> * Load the data and analyze its shape
+> * Plot some examples 
+> * Convert data to HDF5 format
 
 
 {% include links.md %}
