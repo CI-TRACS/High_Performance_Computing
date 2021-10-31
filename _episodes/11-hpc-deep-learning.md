@@ -302,9 +302,10 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > new_model = clone_model(model)
 > opt = keras.optimizers.Adam(learning_rate=0.001)
 > new_model.compile(optimizer=opt, loss='categorical_crossentropy', metrics=['accuracy'])  
-> ~~~
 >                         
 > % train the new model with GPU
+> ~~~
+> 
 > > ### Solution
 > > ~~~
 > > with tf.device('/device:GPU:0'):
