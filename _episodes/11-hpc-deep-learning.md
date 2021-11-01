@@ -145,7 +145,8 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 5. Evaluate/test the model
 6. Improve your model
 
-> ### How to check if you're using GPU ?
+> ## How to check if you're using GPU ?
+> 
 > ~~~
 > tf.config.list_physical_devices('GPU')
 > ~~~
@@ -369,8 +370,9 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 >     index1 = np.argmax(y[i])
 >     plt.title("y: %s\np: %s" % (class_names[index1], class_names[y_pred[i]]), fontsize=9, loc='left')
 >     plt.subplots_adjust(wspace=0.5, hspace=0.4)
->  ~~~   
-
+>  ~~~ 
+>    
+{: .callout}
 
 
 {% include links.md %}
