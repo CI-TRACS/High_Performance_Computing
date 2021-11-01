@@ -349,7 +349,7 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > >     new_history = new_model.fit(data_train,epochs=10,
 > >                                 verbose=1, validation_data=data_valid)
 > >  ~~~      
-> >  {: .language-python} >                         
+> >  {: .language-python}                       
 > {: .solution}
 >                                  
 > Plotting the losses and accuracy for training and validation set
