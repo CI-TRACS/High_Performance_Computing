@@ -87,13 +87,13 @@ You can use following commands to see what modules are available on the cluster 
 - allows you to install softwares written in any programming language,
 - flexibility to create different environments with different software versions,
 - can use both CLI and GUI
-  
+
 > ## Environment isloation
 >   
 > If you try to access a library with different version based on your project, pip may throw an error. 
 > To create isolated environments you can use virtual environment (venv) with pip.
 >
-{: . callout}
+{: .callout}
 
 > ## Environment setup
 >  
