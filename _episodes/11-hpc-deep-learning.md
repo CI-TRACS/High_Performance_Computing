@@ -70,8 +70,8 @@ You can use following commands to see what modules are available on the cluster 
   module list 
   module load <MODULE_NAME>
 ~~~
-{: .source}
-  
+{: .language-bash}
+
 1. Pip: tool to install Python software packages only. 
 
 2. Anaconda (or Conda): cross platform package and environment manager which lets you access C, C++ libraries, R package for scientific computing along with Python.
@@ -99,23 +99,25 @@ You can use following commands to see what modules are available on the cluster 
 >  
 > 1. Create a conda environment
 > ~~~
-> * module load lang/Anaconda3
-> * conda create --name tf2
-> * source activate tf2
+> module load lang/Anaconda3
+> conda create --name tf2
+> source activate tf2
 > ~~~
+> {: .language-bash}
 > 2. Download libraries
 > ~~~
-> * conda install tensorflow-gpu
-> * conda install matplotlib
-> * conda install tensorflow
-> * conda install keras
+> conda install tensorflow-gpu
+> conda install matplotlib
+> conda install tensorflow
+> conda install keras
 > ~~~
+> {: .language-bash}
 > 3. Get a python kernel
 > ~~~
-> * conda install ipykernel
-> * python -m ipykernel install --user --name tf2 --display-name tf2
+> conda install ipykernel
+> python -m ipykernel install --user --name tf2 --display-name tf2
 > ~~~
-> 
+> {: .language-bash}
 {: .challenge} 
   
 ## Deep Learning Tutorial
