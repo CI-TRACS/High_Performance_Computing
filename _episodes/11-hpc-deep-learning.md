@@ -47,15 +47,18 @@ Jupyter notebook allows you to access .ipynb files only, i.e. it will create a c
 ### Jupyter Lab
 It is a flexible, web based application which is mainly used in data science and machine learning research. It gives you acess to file browser (to upload, download, copy, rename, delete files), do data visualization, add data, code, texts, equations all in one place, use big data tools, share your work with others. It supports more than 40 programming languages and has an interactive output. 
   
-> **Q. How does it work?**
->  
->You write your code or plain text in rectangular “cells” and the browser then passes it to the back-end “kernel”, which runs your code and returns output.
+> ## Q. How does Jupyter work?
+>
+> > You write your code or plain text in rectangular “cells” and the browser then passes it to the back-end “kernel”, which runs your code and returns output.
+>
+{: .callout}
 
-`Note: .ipynb file is a python notebook which stores code, text, markdown, plots, results in a specific format but .py file is a python file which only 
-stores code and plain text (like comments etc).`  
-
-
-  
+> ## File extensions and content
+> .ipynb file is a python notebook which stores code, text, markdown, plots, results in a specific 
+> format but .py file is a python file which only stores code and plain text (like comments etc).
+>
+{: .callout} 
+ 
 ## How to access and install softwares and modules on cluster?
   
 ### Package Managers:
@@ -73,15 +76,25 @@ You can use following commands to see what modules are available on the cluster 
 
 2. Anaconda (or Conda): cross platform package and environment manager which lets you access C, C++ libraries, R package for scientific computing along with Python.
   
-`Note: package contains all the files you need for a module`  
+> ## Note  
+> 
+> package contains all the files you need for a module
+>
+{: .callout}
+
 
 ### Anaconda
 - allows you to install softwares written in any programming language,
 - flexibility to create different environments with different software versions,
 - can use both CLI and GUI
   
-> If you try to access a library with different version based on your project, pip may throw an error. To create isolated environments you can use virtual environment (venv) with pip.
-  
+> ## Environment isloation
+>   
+> If you try to access a library with different version based on your project, pip may throw an error. 
+> To create isolated environments you can use virtual environment (venv) with pip.
+>
+{: . callout}
+
 > ## Environment setup
 >  
 > 1. Create a conda environment
@@ -115,9 +128,12 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
   
  <img src="../fig/CIFAR-10.jpg" width="500" height="400">
  
-> **What is Tensorflow?** 
+> ## What is Tensorflow?
 >
-> It is an open source software used in machine learning particularly for training neural networks. We'll define our model using 'Keras'- a high level API which acts as an interface between tensorflow and python and makes it easy to build and train models.
+> It is an open source software used in machine learning particularly for training neural networks. 
+> We'll define our model using 'Keras'- a high level API which acts as an interface between tensorflow 
+> and python and makes it easy to build and train models.
+>
 {: .callout}
   
 ### Basic workflow of Machine Learning
@@ -136,11 +152,12 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > 
 > Now, how would you check for CPU ?
 >
-> > ### Solution
+> > ## Solution
 > > ~~~
 > > tf.config.list_physical_devices('CPU')
 > > ~~~
 > {: .solution}
+> 
 {: .challenge}
 
 > ## Working with Cifar-10 dataset
