@@ -98,6 +98,7 @@ You can use following commands to see what modules are available on the cluster 
 > ## Environment setup
 >  
 > 1. Create a conda environment
+> 
 > ~~~
 > module load lang/Anaconda3
 > conda create --name tf2
@@ -106,6 +107,7 @@ You can use following commands to see what modules are available on the cluster 
 > {: .language-bash}
 > 
 > 2. Download libraries
+> 
 > ~~~
 > conda install tensorflow-gpu
 > conda install matplotlib
@@ -115,6 +117,7 @@ You can use following commands to see what modules are available on the cluster 
 > {: .language-bash}
 >
 > 3. Get a python kernel
+> 
 > ~~~
 > conda install ipykernel
 > python -m ipykernel install --user --name tf2 --display-name tf2
