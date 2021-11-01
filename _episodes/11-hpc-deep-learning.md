@@ -104,6 +104,7 @@ You can use following commands to see what modules are available on the cluster 
 > source activate tf2
 > ~~~
 > {: .language-bash}
+> 
 > 2. Download libraries
 > ~~~
 > conda install tensorflow-gpu
@@ -112,12 +113,14 @@ You can use following commands to see what modules are available on the cluster 
 > conda install keras
 > ~~~
 > {: .language-bash}
+>
 > 3. Get a python kernel
 > ~~~
 > conda install ipykernel
 > python -m ipykernel install --user --name tf2 --display-name tf2
 > ~~~
 > {: .language-bash}
+>
 {: .challenge} 
   
 ## Deep Learning Tutorial
