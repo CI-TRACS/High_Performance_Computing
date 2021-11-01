@@ -126,6 +126,7 @@ Since our Jupyter Lab Notebook is somewhat IO bounded (reading/writing images to
 > !ls "./lus_scratch/"
 > {% endraw %}
 > ~~~
+> {: .language-python}
 {: .challenge}
 
 > ## Update Training Data Path 
@@ -143,6 +144,7 @@ Since our Jupyter Lab Notebook is somewhat IO bounded (reading/writing images to
 >print(type(X_train))
 > {% endraw %}
 > ~~~
+> {: .language-python}
 {: .challenge}
 
 
@@ -159,6 +161,7 @@ Since our Jupyter Lab Notebook is somewhat IO bounded (reading/writing images to
 >                        verbose=1, validation_data=data_valid)
 > {% endraw %}
 > ~~~
+> {: .language-python}
 {: .challenge}
 
 
