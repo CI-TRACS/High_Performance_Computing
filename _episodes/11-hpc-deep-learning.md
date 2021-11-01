@@ -155,6 +155,7 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > ~~~
 > tf.config.list_physical_devices('GPU')
 > ~~~
+> {: .language-python}
 > 
 > Now, how would you check for CPU ?
 >
@@ -162,6 +163,7 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > > ~~~
 > > tf.config.list_physical_devices('CPU')
 > > ~~~
+> > {: .language-python}
 > {: .solution}
 > 
 {: .challenge}
@@ -187,6 +189,7 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > 
 > %matplotlib inline
 > ~~~
+> {: .language-python}
 > 
 > * Check for CPU and GPU
 > 
@@ -201,6 +204,7 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > print('number of classes= %s' %len(set(y_train.flatten())))
 > print(type(x_train))
 > ~~~
+> {: .language-python}
 > 
 > * Plot some examples 
 > 
@@ -213,6 +217,7 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 >     class_index = np.argmax(to_categorical(y_train[i], 10))
 >     plt.title(class_names[class_index], fontsize=9)
 > ~~~    
+> {: .language-python}
 > 
 > * Convert data to HDF5 format
 > 
@@ -223,6 +228,7 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 >     dset_x_test = hf.create_dataset('x_valid', data=x_valid, shape=(10000, 32, 32, 3), compression='gzip', chunks=True)
 >     dset_y_test = hf.create_dataset('y_valid', data=y_valid, shape=(10000, 1), compression='gzip', chunks=True)
 > ~~~
+> {: .language-python}
 > 
 > * Define the model
 > 
@@ -254,6 +260,7 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 >
 > model.summary()
 > ~~~
+> {: .language-python}
 >
 > * Define the data generator
 >
@@ -302,7 +309,8 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 >         if self.shuffle:
 >             np.random.shuffle(self.indices)
 >  ~~~
->
+> {: .language-python}
+> 
 > Generate batches of data for training and validation dataset
 >
 > ~~~
@@ -310,6 +318,7 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > data_train = DataGenerator(batch_size=batchsize)
 > data_valid = DataGenerator(batch_size=batchsize, test=True, shuffle=False)
 > ~~~
+> {: .language-python}
 > 
 > First, let's train the model using CPU
 > ~~~
@@ -317,7 +326,8 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 >     history = model.fit(data_train,epochs=10,
 >                         verbose=1, validation_data=data_valid)
 > ~~~
->                         
+> {: .language-python}
+>                          
 > Now, lets try with GPU to compare its performance with CPU
 >
 > ~~~
@@ -328,13 +338,15 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 >                         
 > % train the new model with GPU
 > ~~~
+> {: .language-python}
 > 
 > > ### Solution
 > > ~~~
 > > with tf.device('/device:GPU:0'):
 > >     new_history = new_model.fit(data_train,epochs=10,
 > >                                 verbose=1, validation_data=data_valid)
-> >  ~~~                               
+> >  ~~~      
+> >  {: .language-python}                         
 > {: .solution}
 >                                  
 > Plotting the losses and accuracy for training and validation set
@@ -352,7 +364,8 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > axes[1].legend()
 > axes[1].grid()
 > ~~~
->
+> {: .language-python}
+> 
 > * Evaluate the model and make predictions
 > 
 > ~~~
@@ -364,6 +377,7 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > 
 > y_pred = new_model.predict_classes(x)
 > ~~~
+> {: .language-python}
 > 
 > * Plot the predictions
 >
@@ -376,6 +390,7 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 >     plt.title("y: %s\np: %s" % (class_names[index1], class_names[y_pred[i]]), fontsize=9, loc='left')
 >     plt.subplots_adjust(wspace=0.5, hspace=0.4)
 >  ~~~ 
+>  {: .language-python}
 >    
 {: .callout}
 
