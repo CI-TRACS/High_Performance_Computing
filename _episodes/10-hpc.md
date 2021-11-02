@@ -85,9 +85,9 @@ the same functionality and more exist.  One such tool is Open OnDemand (OOD).
 
 ### Features of Open OnDemand
 
-Open OnDemand works with a web browser making it possible to connect to an HPC system like Mana
-with almost any device.  It has built in functionality for file browser, uploading and downloading 
-smaller files, text editing, SSH terminal, and submitting interactive applications such as a Desktop 
+Open OnDemand works with a web browser making it possible to connect to an HPC system 
+with almost any device.  It has built in functionality for file browsing, uploading and downloading 
+smaller files, text editing, SSH terminal, and submitting interactive applications such as a remote desktop 
 on a compute node, Jupyter Lab and Rstudio.
 
 > ## Interactive applications at other institutions
