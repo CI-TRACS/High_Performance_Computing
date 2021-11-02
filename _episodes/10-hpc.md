@@ -75,7 +75,7 @@ ssh dav@mana.its.hawaii.edu
 While, SSH is a common method to connect to remote systems (HPC or even servers), tools that provide
 the same functionality and more exist.  One such tool is Open OnDemand (OOD).
 
-> ## Learn more about OOD
+> ## Learn more about Open OnDemand
 >
 > Created by Ohio Supercomputer Center, U. of Buffalo CCR, and Virginia Tech
 > and development funded by National Science Foundation under 
