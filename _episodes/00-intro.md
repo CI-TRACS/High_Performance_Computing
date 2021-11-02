@@ -65,7 +65,7 @@ Individual computers that compose a cluster are typically called *nodes*
 *machines*). On a cluster, there are different types of nodes for different
 types of tasks.
 
-### What's in a Node?
+### Anatomy of a Node
 
 All of the nodes in an HPC system have the same components as your own laptop
 or desktop: *CPUs* (sometimes also called *processors* or *cores*), *memory*
@@ -75,7 +75,7 @@ computer's memory. Disk refers to all storage that can be accessed like a file
 system. This is generally storage that can hold data permanently, i.e. data is
 still there even if the computer has been restarted. While this storage can be
 local (a hard drive installed inside of it), it is more common for nodes to
-connect to a shared, remote fileserver or cluster of servers.
+connect to a shared, remote/network fileserver or cluster of servers.
 
 {% include figure.html url="" max-width="40%"
    file="/fig/node_anatomy.png"
