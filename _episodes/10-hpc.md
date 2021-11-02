@@ -119,7 +119,7 @@ on a compute node, Jupyter Lab and Rstudio.
 >
 {: .challenge}
 
-### file browsing and editing
+### File browsing and editing
 The file browser allows you to perform directory manipulation, create new files, upload and download files without having to know the command line.
 The file browser can even has the ability to do text editing on files 
 which is useful if you are not familiar with a command line text editor.
