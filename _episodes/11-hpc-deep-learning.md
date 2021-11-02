@@ -30,12 +30,12 @@ as soon as the resources requested are available.
 >
 > As we will be working in Jupyter Lab to explore some concepts when working with HPC systems and deep learning your challenge is to 
 > start an interactive application of Jupyter Lab with the following parameters
-> * Partition: workshop
-> * Number of hours: 5
-> * Number of cores: 6
-> * GB of Ram: 20 GB
-> * Number of GPUs requested: 1
-> * GPU Type: Any
+> * **Partition:** workshop
+> * **Number of hours:** 5
+> * **Number of cores:** 4
+> * **GB of Ram:** 20 GB
+> * **Number of GPUs requested:** 1
+> * **GPU Type:** Any
 >
 {: .challenge}                                             
                                              
