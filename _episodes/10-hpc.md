@@ -167,4 +167,8 @@ browser.
    file="/fig/ood_job.png"
    alt="Connect to cluster" caption="" %}
 
+> Material used and modfied from the 
+> ["Introduction to High-Performance Computing" Incubator workshop](https://carpentries-incubator.github.io/hpc-intro/).
+{: .callout}
+
 {% include links.md %}
