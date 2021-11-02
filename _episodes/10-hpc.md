@@ -18,7 +18,7 @@ The first step in using a cluster is to establish a connection from our laptop
 to the cluster. When we are sitting at a computer (or standing, or holding it
 in our hands or on our wrists), we have come to expect a visual display with
 icons, widgets, and perhaps some windows or applications: a graphical user
-interface, or GUI. Since computer clusters are remote resources that we connect
+interface, or GUI. Since HPC systems are remote resources that we connect
 to over often slow or laggy interfaces (WiFi and VPNs especially), it is more
 practical to use a command-line interface, or CLI, in which commands and
 results are transmitted via text, only. Anything other than text (images, for
@@ -64,8 +64,7 @@ ssh dav@mana.its.hawaii.edu
 
 > ## Take note
 >
-> You would replace `dav` with your username. 
-> You may be asked for your password. Watch out: the
+> You may be asked for your password. **Watch out**: the
 > characters you type after the password prompt are not displayed on the screen.
 > Normal output will resume once you press `Enter`.
 > 
