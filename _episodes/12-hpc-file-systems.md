@@ -58,7 +58,7 @@ On Mana cluster, the two main supported file systems are <b>Network File System 
 ### Lustre File System.
 &nbsp;
 
-{% include figure.html url="" max-width="40%"
+{% include figure.html url="" max-width="60%"
    file="/fig/lustre.png"
    alt="Lustre File System" caption="Lustre File System (https://wiki.lustre.org/Introduction_to_Lustre)
  "%}
