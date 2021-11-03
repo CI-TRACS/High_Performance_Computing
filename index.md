@@ -4,8 +4,6 @@ root: .
 permalink: index.html  # Is the only page that doesn't follow the pattern /:path/index.html
 ---
 
-{% include gh_variables.html %}
-
 This workshop focuses on Utilization of High performance Computing (HPC) clusters, such as Mana, for deep learning tasks as well as the benefits of understanding the different types of file systems available on HPC clusters and basic ways one would stage data from slower file systems to faster file systems.
 Attendees will learn how to use Jupyter Lab on Mana via Open OnDemand, the benefits of using GPUs over just CPUs for deep learning applications and how staging data the correct file system can improve performance of deep learning jobs.
 
