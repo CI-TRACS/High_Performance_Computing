@@ -100,16 +100,70 @@ On MANA, our "home/user" directory resides on an NFS file system server. Though 
 > ~~~
 {: .challenge}
 
+> ## Simulating Read/Write Load
+> Let's compare read/write speed between the 2 file systems. 
+> In new cells, define a write function that simulates writes to our file system  and define a read function that simulates read from our file systems.
+> Note that internally, file write operation is buffered to memory, this is the reason why we need to flush our buffer so that actual writes to disk happens.
+> ~~~
+> {% raw  %}
+>def write_large_file(path):
+>    with open(path, 'w') as f:
+>        for i in range(1000000):
+>            f.write(str(i))
+>            f.flush()
+>def read_large_file(path):
+>    with open(path, 'r') as f:
+>        for i in range(1000000):
+>            f.read(1)
+> {% endraw %}
+> ~~~
+{: .challenge}
+
+> ## Timing Read/Write Operations 
+> Now that we have defined our read/write functions, let's profile them. 
+> In new cells, call our read / write functions from our "lus_scratch" directory.
+> Similarly call our read/write functions from our "home" directory (remember that home directory resides in MANA NFS file system servers).
+> To time the cells, we can call "%%time" at the beggining of our cells.
+> This is a special command in Jupyter Lab Notebook that allows us to time execution time of a cell.
+> ~~~
+> {% raw  %}
+> %%time
+> write_large_file("./lus_scratch/large_file.txt")
+> {% endraw %}
+> ~~~
+>
+> ~~~
+> {% raw  %}
+> %%time
+> read_large_file("./lus_scratch/large_file.txt")
+> {% endraw %}
+> ~~~
+>
+> ~~~
+> {% raw  %}
+> %%time
+> write_large_file("./large_file.txt")
+> {% endraw %}
+> ~~~
+>
+> ~~~
+> {% raw  %}
+> %%time
+> read_large_file("./large_file.txt")
+> {% endraw %}
+> ~~~
+{: .challenge}
+
 > ## Solid State Drive vs. Hardrive Performance
 > Solid state drives can read up to 10 times faster and writes up to 20 times faster than hard disk drive. 
 > You can read more about it [here](https://www.avg.com/en/signal/ssd-hdd-which-is-best#:~:text=A%20solid%20state%20drive%20reads,PCIe%203.0%20to%204.0%20connectors).
 {: .callout}  
 
 ## Optimizing Our Deep Learning Code
-Since our Jupyter Lab Notebook is somewhat IO bounded (reading/writing images to disks) we can optimize it further by utilizing "lus_scratch" folder. Instead of reading and writing training data from our home directory, we're going to instead work from the "lus_scratch" directory. 
+We can optimize our Deep Learning Jupyter Lab Notebook further by utilizing "lus_scratch" folder. Instead of reading and writing training data from our home directory, we're going to instead work from the "lus_scratch" directory. 
 
 > ## Stage Training Files
-> We will re-download the training data into the "lus_scratch" directory. 
+> We will now make a copy of the training data into the "lus_scratch" directory. 
 > Create a new cell in our Jupyter Lab Notebook.
 > Paste the code below into the cell.
 > Update the path so that the data is save into our "lus_scratch" directory.
@@ -117,48 +171,47 @@ Since our Jupyter Lab Notebook is somewhat IO bounded (reading/writing images to
 > ~~~
 > {% raw  %}
 > # Stage files onto luster directory.
-> (x_train_lus, y_train_lus), (x_valid_lus, y_valid_lus) = cifar10.load_data()
-> with h5py.File('./lus_scratch/dataset_cifar10.hdf5', 'w') as hf:
->   hf.create_dataset('x_train', data=x_train_lus, shape=(50000, 32, 32, 3), compression='gzip', chunks=True)
->   hf.create_dataset('y_train', data=y_train_lus, shape=(50000, 1), compression='gzip', chunks=True)
->   hf.create_dataset('x_valid', data=x_valid_lus, shape=(10000, 32, 32, 3), compression='gzip', chunks=True)
->   hf.create_dataset('y_valid', data=y_valid_lus, shape=(10000, 1), compression='gzip', chunks=True)
+>with h5py.File('./lus_scratch/dataset_cifar10.hdf5', 'w') as hf:
+>    dset_x_train = hf.create_dataset('x_train', data=x_train, shape=(50000, 32, 32, 3), compression='gzip', chunks=True)
+>    dset_y_train = hf.create_dataset('y_train', data=y_train, shape=(50000, 1), compression='gzip', chunks=True)
+>    dset_x_test = hf.create_dataset('x_valid', data=x_valid, shape=(10000, 32, 32, 3), compression='gzip', chunks=True)
+>    dset_y_test = hf.create_dataset('y_valid', data=y_valid, shape=(10000, 1), compression='gzip', chunks=True)
 > !ls "./lus_scratch/"
 > {% endraw %}
 > ~~~
 > {: .language-python}
 {: .challenge}
 
-> ## Update Training Data Path 
-> Now that we have successfully staged our training data to the "lus_scratch" directory, let us now update the data path for our model.
+> ## Update Data Generator File Path 
+> Now that we have successfully staged our training data to the "lus_scratch" directory, let us now update the data path for our data generator.
 > Find where the data is loaded, the code in the cell should look like the code below.
 > Once the cell is updated, run the cell.
 > ~~~
 > {% raw  %}
-> # Loading training data from luster scratch
->with h5py.File('./lus_scratch/dataset_cifar10.hdf5', 'r') as hf:
->    X_train = hf['x_train'][:]
->    Y_train = hf['y_train'][:]
->    X_valid = hf['x_valid'][:]
->    Y_valid = hf['y_valid'][:]
->print(type(X_train))
+> filename = "./lus_scratch/dataset_cifar10.hdf5"
+> batchsize  = 250 
+> data_train_lus = DataGenerator(filename, batch_size=batchsize, test=False)
+> data_valid_lus = DataGenerator(filename, batch_size=batchsize, test=True, shuffle=False)
 > {% endraw %}
 > ~~~
 > {: .language-python}
 {: .challenge}
 
 
-> ## Duplicate the Training Cell
-> Before retraining our model, let's duplicate the cell that contain codes for training our model.
-> This is so that we don't lose the printout from our previous run. Use the GPU version of the training code similiar to below.
+> ## Rerun The Model With The Updated Data Generator
+> Let's rerun our model with the new data generator objects.
+> Use the GPU version of the training code similiar to below.
 > Run training step of the model.
-> Compare the training time.
+> Compare the training time. Note: As we've seen previously, both file systems are comparable in read speed for small data sets. Here, we may not see a huge difference since we're mostly performing read. With bigger data sets, such as "cifar100" data set, differences in read speed will be more noticable.
 > ~~~
 > {% raw  %}
-> # Running on Lustre 
-> with tf.device('/device:GPU:0'):
->    history = model.fit(data_train,epochs=20,
->                        verbose=1, validation_data=data_valid)
+> from tensorflow.keras.models import clone_model
+> new_model = clone_model(model)
+> opt = keras.optimizers.Adam(learning_rate=0.001)
+> new_model.compile(optimizer=opt, loss='categorical_crossentropy', metrics=['accuracy'])
+>with tf.device('/device:GPU:0'):
+>    new_history = new_model.fit(data_train_lus, epochs=10,
+                                verbose=1, validation_data=data_valid_lus)
 > {% endraw %}
 > ~~~
 > {: .language-python}
