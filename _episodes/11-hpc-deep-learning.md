@@ -200,12 +200,12 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > 
 > * Check for CPU and GPU
 > 
->  ## How to check if you're using GPU ?
-> 
-> ~~~
-> tf.config.list_physical_devices('GPU')
-> ~~~
-> {: .language-python}
+> > ## How to check if you're using GPU ?
+> >
+> > ~~~
+> > tf.config.list_physical_devices('GPU')
+> > ~~~
+> >{: .language-python}
 > 
 > Now, how would you check for CPU ?
 >
