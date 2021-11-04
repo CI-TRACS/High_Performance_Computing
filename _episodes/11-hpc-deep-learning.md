@@ -42,7 +42,7 @@ as soon as the resources requested are available.
   
 ## Jupyter Lab vs Jupyter Notebook
 
-Jupyter notebook allows you to access .ipynb files only, i.e. it will create a computational environment which stores your code, results, plots, texts etc. And here you can work only in one of your environment. But Jupyter Lab gives a better user interface along with all the facilties provided by the notebook. It has a modular structure where one can access .py, .ipynb, html or markdown files, access filebrowser, all in the same window. 
+Jupyter notebook allows you to access .ipynb files (or python notebooks) only, i.e. it will create a computational environment which stores your code, results, plots, texts etc. And here you can work only in one of your environment. But Jupyter Lab gives a better user interface along with all the facilties provided by the notebook. It has a modular structure where one can access .py (or python files), .ipynb (python notebooks), html or markdown files, access file browser, work with multiple Jupyter notebooks and environments, all in the same window. 
   
 ### Jupyter Lab
 It is a flexible, web based application which is mainly used in data science and machine learning research. It gives you acess to file browser (to upload, download, copy, rename, delete files), do data visualization, add data, code, texts, equations all in one place, use big data tools, share your work with others. It supports more than 40 programming languages and has an interactive output. 
@@ -140,11 +140,23 @@ This is a popular package manager in scientific computing which handles the Pyth
 
 > ### Difference between conda envirnment and kernel
 > 
-> Although we created a conda environment, the Jupyter notebook still cannot access it because "conda" is directory that contains all the installed conda packages but it is "kernel" that runs the user's code and can use and access different conda environments, if required. A kernel is the computational engine that executes the code contained in Jupyter notebook.
-  
+> Although we created a conda environment, the Jupyter notebook still cannot access it because "conda" is directory that contains all the 
+> installed conda packages but it is "kernel" that runs the user's code and can use and access different conda environments, if required. 
+> A kernel is the computational engine that executes the code contained in Jupyter notebook.
+> 
+{: .callout}
+
 ## Deep Learning Tutorial
 
 This is a basic image classification tutorial from CIFAR-10 dataset using tensorflow. 
+
+> ### Tensorflow?
+>
+> It is an open source software used in machine learning particularly for training neural networks. 
+> We'll define our model using 'Keras'- a high level API which acts as an interface between tensorflow 
+> and python and makes it easy to build and train models. You can read more about it [here](https://www.tensorflow.org/#).
+>
+{: .callout}
   
 ### Q. What is CIFAR-10 dataset?
   
@@ -152,13 +164,6 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
   
  <img src="../fig/CIFAR-10.jpg" width="500" height="400">
  
-> ## What is Tensorflow?
->
-> It is an open source software used in machine learning particularly for training neural networks. 
-> We'll define our model using 'Keras'- a high level API which acts as an interface between tensorflow 
-> and python and makes it easy to build and train models.
->
-{: .callout}
   
 ### Basic workflow of Machine Learning
   
