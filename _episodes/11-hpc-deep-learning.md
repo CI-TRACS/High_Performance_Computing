@@ -158,7 +158,7 @@ This is a basic image classification tutorial from CIFAR-10 dataset using tensor
 >
 {: .callout}
   
-### CIFAR-10 dataset?
+### CIFAR-10 dataset
   
 CIFAR-10 is a common dataset used for machine learning and computer vision research. It is a subset of 80 million tiny image dataset and consists of 60,000 images. The images are labelled with 10 different classes. So each class has 5000 training images and 1000 test images. Each row represents a color image of 32 x 32 pixels with 3 channels (RGB).   
   
@@ -173,24 +173,6 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 4. Train the model
 5. Evaluate/test the model
 6. Improve your model
-
-> ## How to check if you're using GPU ?
-> 
-> ~~~
-> tf.config.list_physical_devices('GPU')
-> ~~~
-> {: .language-python}
-> 
-> Now, how would you check for CPU ?
->
-> > ## Solution
-> > ~~~
-> > tf.config.list_physical_devices('CPU')
-> > ~~~
-> > {: .language-python}
-> {: .solution}
-> 
-{: .challenge}
 
 > ## Working with Cifar-10 dataset
 >
@@ -214,8 +196,27 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > %matplotlib inline
 > ~~~
 > {: .language-python}
+
 > 
 > * Check for CPU and GPU
+> 
+>  ## How to check if you're using GPU ?
+> 
+> ~~~
+> tf.config.list_physical_devices('GPU')
+> ~~~
+> {: .language-python}
+> 
+> Now, how would you check for CPU ?
+>
+> > ## Solution
+> > ~~~
+> > tf.config.list_physical_devices('CPU')
+> > ~~~
+> > {: .language-python}
+> {: .solution}
+> 
+{: .challenge}
 > 
 > * Load the data and analyze its shape
 > 
