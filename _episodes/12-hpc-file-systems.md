@@ -88,6 +88,11 @@ For this workshop, we will focus on disk random access speed MANA cluster.
 On MANA we have 3 locations for file storage: "home/user", "lus_scratch", and "nfs_scratch" folders available to us. 
 On MANA, our "home/user" directory resides on an NFS file system server. Though "home/user" is great for storing our files on the cluster, it's serverly lacking in read/write performance. For the best performance (read/write speed) we will mostly want to use "lus_scratch". As discussed above, the reason is because Lustre file system distributes workload accross multiple meta servers, while NFS is a single server file system. In addition, MANA Lustre file system is configured with solid state drives while NFS file system is configured with hardrives, improving MANA lustre file system read/write speed further.
 
+> ## Solid State Drive vs. Hardrive Performance
+> Solid state drives can read up to 10 times faster and writes up to 20 times faster than hard disk drive. 
+> You can read more about it [here](https://www.avg.com/en/signal/ssd-hdd-which-is-best#:~:text=A%20solid%20state%20drive%20reads,PCIe%203.0%20to%204.0%20connectors).
+{: .callout}  
+
 > ## List Usage Information
 > On MANA, there's a command that lists disk usage on the cluster.
 > Create a new cell below our previous block.
@@ -155,11 +160,6 @@ On MANA, our "home/user" directory resides on an NFS file system server. Though 
 {: .challenge}
 > ## Read Speed Improvement Performance
 > From the challenge, we may notice a very small improvement in read performance. This is most likely due to the fact that we do sequential reads (read more about that [here](https://condusiv.com/sequential-io-always-outperforms-random-io-on-hard-disk-drives-or-ssds/#:~:text=Random%20I%2FO%20Is%20Much,%2C%20smaller%20random%20I%2FOs.)) and also the fact the created file is too small to show the difference in improvement.
-{: .callout}  
-
-> ## Solid State Drive vs. Hardrive Performance
-> Solid state drives can read up to 10 times faster and writes up to 20 times faster than hard disk drive. 
-> You can read more about it [here](https://www.avg.com/en/signal/ssd-hdd-which-is-best#:~:text=A%20solid%20state%20drive%20reads,PCIe%203.0%20to%204.0%20connectors).
 {: .callout}  
 
 ## Optimizing Our Deep Learning Code
