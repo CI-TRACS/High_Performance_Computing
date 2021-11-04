@@ -150,7 +150,7 @@ This is a popular package manager in scientific computing which handles the Pyth
 
 This is a basic image classification tutorial from CIFAR-10 dataset using tensorflow. 
 
-> ## Tensorflow?
+> ## Tensorflow
 >
 > It is an open source software used in machine learning particularly for training neural networks. 
 > We'll define our model using 'Keras'- a high level API which acts as an interface between tensorflow 
