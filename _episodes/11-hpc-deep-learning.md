@@ -60,16 +60,11 @@ It is a flexible, web based application which is mainly used in data science and
 >
 {: .callout} 
 
-> ## What is a conda environment?
-> 
-> A conda environment is a directory that contains a specific collection of python packages and their different versions that you have installed. 
-> 
-{: .callout}
-
 ## How to access and install softwares and modules on cluster?
   
-### Package Managers:
-Software packages already installed on the cluster which we can use to install required libraries, softwares and can even choose which version to install.
+### Using a package manager
+
+Working with Python requires one to have different packages installed with a specific version which gets updated once in a while. On Mana, there are software packages already installed on the cluster which one can use to install those required libraries, softwares and can even choose which version to install.
 You can use following commands to see what modules are available on the cluster or which ones are already loaded or to load a specific module in your environment:
 
 ~~~
@@ -79,7 +74,11 @@ You can use following commands to see what modules are available on the cluster 
 ~~~
 {: .language-bash}
 
-1. Pip: tool to install Python software packages only. 
+### So what is an environment then?
+ 
+Sometimes different applications require different versions of the Python packages than the one you've been using and this is where a Python environment comes in handy.  An environment (or a conda environment specifically, which we'll discuss later) is a directory that contains a specific collection of python packages and their different versions that you have installed. There are 2 most popular tools to set up yur environment:
+ 
+1. Pip: a tool to install Python software packages only. 
 
 2. Anaconda (or Conda): cross platform package and environment manager which lets you access C, C++ libraries, R package for scientific computing along with Python.
   
@@ -91,9 +90,12 @@ You can use following commands to see what modules are available on the cluster 
 
 
 ### Anaconda
-- allows you to install softwares written in any programming language,
-- flexibility to create different environments with different software versions,
-- can use both CLI and GUI
+
+This is a popular package manager in scientific computing which handles the Python and R programming language realted dependencies rather easily. It is preferred more because:
+- it has a clear directory structure which is easy to understand,
+- it allows you to install softwares written in any programming language,
+- it gives you a flexibility to create different environments with different software versions (and can install pip packages as well),
+- one can use both CLI and GUI.
 
 > ## Environment isloation
 >   
@@ -104,7 +106,7 @@ You can use following commands to see what modules are available on the cluster 
 
 > ## Environment setup
 >  
-> 1. Create a conda environment
+> - Create a conda environment
 > 
 > ~~~
 > module load lang/Anaconda3
@@ -113,7 +115,7 @@ You can use following commands to see what modules are available on the cluster 
 > ~~~
 > {: .language-bash}
 > 
-> 2. Download libraries
+> - Install relevant libraries
 > 
 > ~~~
 > conda install tensorflow-gpu
@@ -123,7 +125,7 @@ You can use following commands to see what modules are available on the cluster 
 > ~~~
 > {: .language-bash}
 >
-> 3. Get a python kernel
+> - Create a python kernel
 > 
 > ~~~
 > conda install ipykernel
@@ -132,6 +134,10 @@ You can use following commands to see what modules are available on the cluster 
 > {: .language-bash}
 >
 {: .challenge} 
+
+> ### Difference between conda envirnment and kernel
+> 
+> Although we created a conda environment, the Jupyter notebook still cannot access it because "conda" is directory that contains all the installed conda packages but it is "kernel" that runs the user's code and can use and access different conda environments, if required. A kernel is the computational engine that executes the code contained in Jupyter notebook.
   
 ## Deep Learning Tutorial
 
