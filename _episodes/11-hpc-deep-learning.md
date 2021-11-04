@@ -31,9 +31,9 @@ as soon as the resources requested are available.
 > As we will be working in Jupyter Lab to explore some concepts when working with HPC systems and deep learning your challenge is to 
 > start an interactive application of Jupyter Lab with the following parameters
 > * **Partition:** workshop
-> * **Number of hours:** 5
+> * **Number of hours:** 3
 > * **Number of cores:** 4
-> * **GB of Ram:** 20 GB
+> * **GB of Ram:** 24 GB
 > * **Number of GPUs requested:** 1
 > * **GPU Type:** Any
 >
@@ -47,7 +47,7 @@ Jupyter notebook allows you to access .ipynb files only, i.e. it will create a c
 ### Jupyter Lab
 It is a flexible, web based application which is mainly used in data science and machine learning research. It gives you acess to file browser (to upload, download, copy, rename, delete files), do data visualization, add data, code, texts, equations all in one place, use big data tools, share your work with others. It supports more than 40 programming languages and has an interactive output. 
   
-> ## Q. How does Jupyter work?
+> ## How does Jupyter work?
 >
 > You write your code or plain text in rectangular “cells” and the browser then passes it to the back-end “kernel”, which runs your code and returns output.
 >
@@ -59,7 +59,13 @@ It is a flexible, web based application which is mainly used in data science and
 > format but .py file is a python file which only stores code and plain text (like comments etc).
 >
 {: .callout} 
- 
+
+> ## What is a conda environment?
+> 
+> A conda environment is a directory that contains a specific collection of python packages and their different versions that you have installed. 
+> 
+{: .callout}
+
 ## How to access and install softwares and modules on cluster?
   
 ### Package Managers:
