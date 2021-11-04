@@ -96,6 +96,9 @@ This is a popular package manager in scientific computing which handles the Pyth
 - it allows you to install softwares written in any programming language,
 - it gives you a flexibility to create different environments with different software versions (and can install pip packages as well),
 - one can use both CLI and GUI.
+{% include figure.html url="" max-width="50%"
+   file="/fig/Anaconda+Python.png"
+   alt="Anaconda + Python" caption="" %}
 
 > ## Environment isloation
 >   
