@@ -138,7 +138,7 @@ This is a popular package manager in scientific computing which handles the Pyth
 >
 {: .challenge} 
 
-> ### Difference between conda envirnment and kernel
+> ## Difference between conda envirnment and kernel
 > 
 > Although we created a conda environment, the Jupyter notebook still cannot access it because "conda" is directory that contains all the 
 > installed conda packages but it is "kernel" that runs the user's code and can use and access different conda environments, if required. 
@@ -150,7 +150,7 @@ This is a popular package manager in scientific computing which handles the Pyth
 
 This is a basic image classification tutorial from CIFAR-10 dataset using tensorflow. 
 
-> ### Tensorflow?
+> ## Tensorflow?
 >
 > It is an open source software used in machine learning particularly for training neural networks. 
 > We'll define our model using 'Keras'- a high level API which acts as an interface between tensorflow 
