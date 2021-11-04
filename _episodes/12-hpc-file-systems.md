@@ -124,7 +124,7 @@ On MANA, our "home/user" directory resides on an NFS file system server. Though 
 > In new cells, call our read / write functions from our "lus_scratch" directory.
 > Similarly call our read/write functions from our "home" directory (remember that home directory resides in MANA NFS file system servers).
 > To time the cells, we can call "%%time" at the beggining of our cells.
-> This is a special command in Jupyter Lab Notebook that allows us to time execution time of a cell.
+> This is a special command in Jupyter Lab Notebook that allows us to time execution time of a cell. 
 > ~~~
 > {% raw  %}
 > %%time
@@ -153,6 +153,9 @@ On MANA, our "home/user" directory resides on an NFS file system server. Though 
 > {% endraw %}
 > ~~~
 {: .challenge}
+> ## Read Speed Improvement Performance
+> From the challenge, we may notice a very small improvement in read performance. This is most likely due to the fact that we do sequential reads (read more about that [here](https://condusiv.com/sequential-io-always-outperforms-random-io-on-hard-disk-drives-or-ssds/#:~:text=Random%20I%2FO%20Is%20Much,%2C%20smaller%20random%20I%2FOs.)) and also the fact the created file is too small to show the difference in improvement.
+{: .callout}  
 
 > ## Solid State Drive vs. Hardrive Performance
 > Solid state drives can read up to 10 times faster and writes up to 20 times faster than hard disk drive. 
