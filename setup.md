@@ -11,8 +11,9 @@ title: Setup
 ---
 # Required files
 
-Please download the following file to your local computer.  We will be uploading it and using it during the workshop.
-**Download using the "save as" function (typically right click save as)**
+Please download the following file to your local computer.  We will be uploading it and using it during the workshop.  
+
+**Download using the "save as" function (right click save as)**
 * <a href ="https://raw.githubusercontent.com/CI-TRACS/High_Performance_Computing/gh-pages/code/participants-copy.ipynb">notebook</a>
 
 ---
