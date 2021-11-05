@@ -25,9 +25,9 @@ results are transmitted via text, only. Anything other than text (images, for
 example) must be written to disk and opened with a separate program.
 
 If you have ever opened the Windows Command Prompt or macOS Terminal, you have
-seen a CLI. If you have already taken The Carpentries' courses on the UNIX
-Shell or Version Control, you have used the CLI on your local machine somewhat
-extensively. The only leap to be made here is to open a CLI on a *remote*
+seen a CLI. If you have already taken aCarpentries' course on the UNIX
+Shell or Version Control, you have used the CLI. 
+The only leap to be made here is to open a CLI on a *remote*
 machine, while taking some precautions so that other folks on the network can't
 see (or change) the commands you're running or the results the remote machine
 sends back. We will use the Secure SHell protocol (or SSH) to open an encrypted
