@@ -53,9 +53,10 @@ as soon as the resources requested are available.
 ## Why use Jupyter?
 
 For python based data science and machine learning applications, Jupyter notebook is a great platform because:
-1. you can store your data, code, visualizations, equations, text, outputs all in one place,
+1. you can store your data, code, do visualizations, equations, text, outputs all in one place,
 2. you can easily share your work easily in different formats like JSON, PDF, html,
-3. it supports more than 40 programming languages and has an interactive output.
+3. it supports more than 40 programming languages, can switch between differnt environments and has an interactive output,
+4. can easily edit the code and re-run it without affecting other sections.
 
 ### Jupyter Lab vs Jupyter Notebook
 
@@ -63,9 +64,8 @@ Jupyter notebook allows you to access ipython notebooks only (.ipynb files), i.e
 your code, results, plots, texts etc. And here you can work in only one of your environments. But Jupyter Lab gives a better user interface 
 along with all the facilties provided by the notebook. It is a flexible, web based application with a modular structure where one can access 
 python files (.py), ipython notebooks, html or markdown files, access file browser (to upload, download, copy, rename, delete files), work with 
-multiple Jupyter notebooks and environments, all in the same window. It is more preferred for Data Science and Machine Learning research because 
-one can also do data visualization, add data, code, texts, equations all in one place and use big data tools.
-  
+multiple Jupyter notebooks and environments, all in the same window. 
+
 > ## How does JupyterLab work?
 >
 > You write your code or plain text in rectangular “cells” and the browser then passes it to the back-end “kernel”, which runs your code and returns output.
