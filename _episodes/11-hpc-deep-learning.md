@@ -203,7 +203,6 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > %matplotlib inline
 > ~~~
 > {: .language-python}
-
 > 
 > * Check for CPU and GPU
 > 
