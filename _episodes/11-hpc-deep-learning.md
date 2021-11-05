@@ -23,22 +23,30 @@ The form is used to specify what resources you want, which are then placed into 
 as soon as the resources requested are available.  
 > ## Under the hood
 > 
-> The Open On Demand form for interactive applications define a job script and passes it to the HPC systems job scheduler, leaving the
-> hard work of how to start the application on the HPC system and how to write a job script that the job scheduler can understand.
+> The Open On Demand form for interactive applications defines a job script and passes it to the HPC systems job scheduler, 
+> taking the burden of how to start the application on the HPC system and how to write a job script that the job scheduler 
+> can understand off of the user.
 >
 {: .callout}
                                              
-> ## Starting an Interactive session of Jupyter Lab
+> ## Starting an Interactive session of Jupyter Lab and Open Jyupyter Lab
 >
 > As we will be working in Jupyter Lab to explore some concepts when working with HPC systems and deep learning your challenge is to 
 > start an interactive application of Jupyter Lab with the following parameters
 > * **Partition:** workshop
 > * **Number of hours:** 3
-> * **Number of cores:** 4
+> * **Number of Tasks per Node**: 1
+> * **Number of cores per task:** 4
 > * **GB of Ram:** 24 GB
 > * **Number of GPUs requested:** 1
 > * **GPU Type:** Any
 >
+> Once the interactive session is running Connect to the jupyter session by click the "Connect to Jupyter" button.
+> 
+> > ## Solution
+> > <img src="../fig/ood_job.png" alt="Job running"  max-width="50%" />
+> >
+> {: .solution}
 {: .challenge}                                             
                                              
   
@@ -51,7 +59,12 @@ For python based data science and machine learning applications, Jupyter noteboo
 
 ### Jupyter Lab vs Jupyter Notebook
 
-Jupyter notebook allows you to access python notebooks only (.ipynb files), i.e. it will create a computational environment which stores your code, results, plots, texts etc. And here you can work in only one of your environments. But Jupyter Lab gives a better user interface along with all the facilties provided by the notebook. It is a flexible, web based application with a modular structure where one can access python files (.py), python notebooks, html or markdown files, access file browser (to upload, download, copy, rename, delete files), work with multiple Jupyter notebooks and environments, all in the same window. It is more preferred for Data Science and Machine Learning research because one can also do data visualization, add data, code, texts, equations all in one place and use big data tools.
+Jupyter notebook allows you to access python notebooks only (.ipynb files), i.e. it will create a computational environment which stores 
+your code, results, plots, texts etc. And here you can work in only one of your environments. But Jupyter Lab gives a better user interface 
+along with all the facilties provided by the notebook. It is a flexible, web based application with a modular structure where one can access 
+python files (.py), python notebooks, html or markdown files, access file browser (to upload, download, copy, rename, delete files), work with 
+multiple Jupyter notebooks and environments, all in the same window. It is more preferred for Data Science and Machine Learning research because 
+one can also do data visualization, add data, code, texts, equations all in one place and use big data tools.
   
 > ## How does JupyterLab work?
 >
@@ -66,11 +79,12 @@ Jupyter notebook allows you to access python notebooks only (.ipynb files), i.e.
 >
 {: .callout} 
 
-## How to access and install softwares and modules on cluster?
+## How to access and install softwares and modules on a cluster?
   
 ### Using a package manager
 
-Working with Python requires one to have different packages installed with a specific version which gets updated once in a while. On Mana, there are software packages already installed on the cluster which one can use to install the required libraries, softwares and can even choose which version to install.
+Working with Python requires one to have different packages installed with a specific version which gets updated once in a while. On Mana, there are 
+software packages already installed on the cluster which one can use to install the required libraries, softwares and can even choose which version to install.
 You can use following commands to see what modules are available on the cluster or which ones are already loaded or to load a specific module in your environment:
 
 ~~~
@@ -82,7 +96,8 @@ You can use following commands to see what modules are available on the cluster 
 
 ### So what is an environment then?
  
-Sometimes different applications require different versions of the Python packages than the one you've been using and this is where a Python environment comes in handy.  An environment (or a conda environment specifically, which we'll discuss later) is a directory that contains a specific collection of python packages and their different versions that you have installed. There are 2 most popular tools to set up yur environment:
+Sometimes different applications require different versions of the Python packages than the one you've been using and this is where a Python environment comes in handy.  
+An environment (or a conda environment specifically, which we'll discuss later) is a directory that contains a specific collection of python packages and their different versions that you have installed. There are 2 most popular tools to set up yur environment:
  
 1. Pip: a tool to install Python software packages only. 
 
@@ -90,7 +105,7 @@ Sometimes different applications require different versions of the Python packag
   
 > ## Note  
 > 
-> package contains all the files you need for a module
+> Packages contains all the files you need for the modules it supplies
 >
 {: .callout}
 
