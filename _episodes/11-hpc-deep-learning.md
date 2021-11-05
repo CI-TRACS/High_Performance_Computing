@@ -150,7 +150,7 @@ This is a popular package manager in scientific computing which handles the Pyth
 > ~~~
 > {: .language-bash}
 >
-> > ## Difference between conda envirnment and kernel
+> > ## Difference between conda environment and kernel
 > >
 > > Although we created a conda environment, the Jupyter notebook still cannot access it because "conda" is the directory that contains all the 
 > > installed conda packages but it is the "kernel" that runs the user's code and can use and access different conda environments, if required. 
