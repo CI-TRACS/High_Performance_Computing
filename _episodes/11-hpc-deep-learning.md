@@ -112,7 +112,7 @@ An environment (or a conda environment specifically, which we'll discuss later) 
 
 ### Anaconda
 
-This is a popular package manager in scientific computing which handles the Python and R programming language realted dependencies rather easily. It is preferred more because:
+This is a popular package manager in scientific computing which handles the Python and R programming language related dependencies rather easily. It is preferred more because:
 - it has a clear directory structure which is easy to understand,
 - it allows you to install softwares written in any programming language,
 - it gives you a flexibility to create different environments with different software versions (and can install pip packages as well),
