@@ -55,7 +55,7 @@ as soon as the resources requested are available.
 For python based data science and machine learning applications, Jupyter notebook is a great platform because:
 1. you can store your data, code, do visualizations, equations, text, outputs all in one place,
 2. you can easily share your work easily in different formats like JSON, PDF, html,
-3. it supports more than 40 programming languages and has an interactive output,
+3. it supports more than 40 programming languages, can switch between differnt environments and has an interactive output,
 4. can easily edit the code and re-run it without affecting other sections.
 
 ### Jupyter Lab vs Jupyter Notebook
