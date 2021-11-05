@@ -21,8 +21,7 @@ The form is used to specify what resources you want, which are then placed into 
 as soon as the resources requested are available.  
 > ## Under the hood
 > 
-> The Open On Demand form for interactive applications define a job script and passes it to the HPC systems job scheduler, leaving the
-> hard work of how to start the application on the HPC system and how to write a job script that the job scheduler can understand.
+> The Open On Demand form for interactive applications defines a job script and passes it to the HPC systems job scheduler, taking the burden of how to start the application on the HPC system and how to write a job script that the job scheduler can understand off of the user.
 >
 {: .callout}
                                              
