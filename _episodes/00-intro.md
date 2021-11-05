@@ -55,7 +55,6 @@ can travel only so fast.
 
 ## Components of an HPC System
 
-### Nodes
 Individual computers that compose a cluster are typically called *nodes*
 (although you will also hear people call them *servers*, *computers* and
 *machines*). On a cluster, there are different types of nodes for different
