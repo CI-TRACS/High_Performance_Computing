@@ -1,7 +1,7 @@
 ---
 title: "Connecting to a remote HPC System"
-teaching: 20
-exercises: 0
+teaching: 10
+exercises: 10
 questions:
 - "How do I log in to a remote HPC system?"
 - "What is Open OnDemand and how do I use it?"
