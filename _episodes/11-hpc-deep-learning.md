@@ -153,7 +153,7 @@ This is a popular package manager in scientific computing which handles the Pyth
 > >
 > > Although we created a conda environment, the Jupyter notebook still cannot access it because "conda" is the directory that contains all the 
 > > installed conda packages but it is the "kernel" that runs the user's code and can use and access different conda environments, if required. 
-> > A kernel is the computational engine that executes the code contained in Jupyter notebook.
+> > A kernel is the computational engine that executes the code contained in Jupyter notebook or it is the interface which tells Jupyter notebook which kernel it should use to access the packages and softwares.
 > >
 > {: .callout}
 > 
@@ -287,7 +287,7 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > 
 > > ## Output
 > > {% include figure.html url="" max-width="50%" file="/fig/plots.png" %}
->   
+> {: .output}
 >
 > * Convert data to HDF5 format
 > 
@@ -442,6 +442,11 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > ~~~
 > {: .language-python}
 > 
+> > ## Output
+> > {% include figure.html url="" max-width="50%" file="/fig/graphs.png" %}
+> > 
+> {: .output}
+> 
 > * Evaluate the model and make predictions
 > 
 > ~~~
@@ -467,6 +472,10 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 >     plt.subplots_adjust(wspace=0.5, hspace=0.4)
 >  ~~~ 
 >  {: .language-python}
+>  
+> > ## Output
+> > {% include figure.html url="" max-width="50%" file="/fig/predictions.png" %}
+> {: .output}
 >    
 {: .challenge}
 
@@ -479,7 +488,10 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 
 ## Other resources to do Machine Learning
 
-You can use [Google Colab](https://colab.research.google.com/#) which uses Jupyter notebooks too but on Google server. Here you can get free limited compute resources and upgrade your account if you want more. The code usually runs on Google servers on cloud and is connected to your google account so all your projects will be saved in your Google Drive. 
+* You can use [Google Colab](https://colab.research.google.com/#) which uses Jupyter notebooks too but on Google server. Here you can get free limited compute resources (even GPU) and upgrade your account (for TPU) if you want more. The code usually runs on Google servers on cloud and is connected to your google account so all your projects will be saved in your Google Drive. 
+* Microsoft [Azure notebook](https://visualstudio.microsoft.com/vs/features/notebooks-at-microsoft/#) is similar to Google Colab with cloud sharing functionality but provides more memory.
+* Kaggle 
+* Amazon Sage Maker
 
 
 {% include links.md %}
