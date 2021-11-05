@@ -79,7 +79,7 @@ connect to a shared, remote/network fileserver or cluster of servers.
 
 ### Login Nodes
 Serves as an access point to the cluster. As a gateway, 
-it issuited for uploading and downloading files. 
+it is suitable for uploading and downloading small files. 
 
 ### Data Transfer Nodes
 If you want to transfer larger amounts of data to or from a cluster, some
