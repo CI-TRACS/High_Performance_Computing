@@ -30,7 +30,7 @@ Shell or Version Control, you have used the CLI.
 The only leap to be made here is to open a CLI on a *remote*
 machine, while taking some precautions so that other folks on the network can't
 see (or change) the commands you're running or the results the remote machine
-sends back. We will use the Secure SHell protocol (or SSH) to open an encrypted
+sends back. These days, we use the Secure SHell protocol (or SSH) to open an encrypted
 network connection between two machines, allowing you to send & receive text
 and data without having to worry about prying eyes.
 
