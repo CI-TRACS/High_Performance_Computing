@@ -203,7 +203,7 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > %matplotlib inline
 > ~~~
 > {: .language-python}
-
+>
 > 
 > * Check for CPU and GPU
 > 
@@ -225,14 +225,15 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > 
 > {: .challenge}
 >
-> > ### Is GPU necessary for machine learning?
+> > ## Is GPU necessary for machine learning?
 > > 
 > > No, machine learning algorithms can be deployed using CPU or GPU, depending on the applications. They both have their distinct properties and which one would 
 > > be best for you to use depends on your application and factors like: speed, power usage and cost. CPUs are more general purposed processors, are cheaper and 
 > > provide a gateway for data to travel from source to GPU cores. But GPU have an advantage to do parallel computing when dealing with large datasets, complex 
 > > neural network models. The difference between the two lies in basic features of a processor i.e. cache, clock speed, power consumption, bandwidth and number of 
 > > cores. Read more that [here](https://thinkml.ai/cpu-vs-gpu-in-machine-learning-algorithms-which-is-better/#).
-> > {: .discussion}
+> > 
+> {: .discussion}
 >  
 > * Load the data and analyze its shape
 > 
@@ -270,6 +271,11 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > ~~~    
 > {: .language-python}
 > 
+> > ## Output
+> > {% include figure.html url="" max-width="50%"
+   file="/fig/plots.png"}
+>   
+>
 > * Convert data to HDF5 format
 > 
 > ~~~
@@ -281,10 +287,11 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > ~~~
 > {: .language-python}
 > 
-> > ### What is HDF5 file?
+> > ## What is HDF5 file?
 > > 
 > > HDF5 file format is a binary data format which is mainly used to store large, heterogenous files. It provides fast, parallel I/O processing. You can learn more > > about it [here](https://www.hdfgroup.org/solutions/hdf5/#) and [here](https://www.christopherlovell.co.uk/blog/2016/04/27/h5py-intro.html#).
-> > {: .callout}
+> > 
+> {: .callout}
 >
 > * Define the model
 > 
