@@ -44,7 +44,7 @@ as soon as the resources requested are available.
 > Once the interactive session is running Connect to the jupyter session by click the "Connect to Jupyter" button.
 > 
 > > ## Solution
-> > <img src="../fig/ood_job.png" alt="Job running"  max-width="50%" />
+> > <img src="../fig/ood_job.png" alt="Job running"  max-width="50%" >
 > >
 > {: .solution}
 {: .challenge}                                             
@@ -261,14 +261,15 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > ~~~
 > {: .language-python}
 >
-> > ## Output
-> > ~~~
-> > Train: X=(50000, 32, 32, 3), y=(50000, 1)
-> > Test: X=(10000, 32, 32, 3), y=(10000, 1)
-> > number of classes= 10
-> > <class 'numpy.ndarray'>
-> > ~~~
-> > {: .language-python}
+> ~~~
+> ~~~
+> Train: X=(50000, 32, 32, 3), y=(50000, 1)
+> Test: X=(10000, 32, 32, 3), y=(10000, 1)
+> number of classes= 10
+> <class 'numpy.ndarray'>
+> ~~~
+> {: .language-python}
+> ~~~
 > {: .output}
 > 
 > * Plot some examples 
@@ -284,8 +285,9 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > ~~~    
 > {: .language-python}
 > 
-> > ## Output
-> > <img max-width="50%" src="../fig/plots.png" />
+> ~~~
+> <img max-width="50%" src="../fig/plots.png" >
+> ~~~
 > {: .output}
 >
 > * Convert data to HDF5 format
@@ -441,9 +443,9 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > ~~~
 > {: .language-python}
 > 
-> > ## Output
-> > <img max-width="50%" src="../fig/graphs.png" />
-> > 
+> ~~~
+> <img max-width="50%" src="../fig/graphs.png" >
+> ~~~ 
 > {: .output}
 > 
 > * Evaluate the model and make predictions
@@ -472,8 +474,9 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > ~~~ 
 > {: .language-python}
 >  
-> > ## Output
-> > {% include figure.html url="" max-width="50%" file="/fig/predictions.png" %}
+> ~~~
+> <img max-width="50%" file="../fig/predictions.png" >
+> ~~~
 > {: .output}
 >    
 {: .challenge}
