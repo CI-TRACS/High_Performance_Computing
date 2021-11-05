@@ -398,6 +398,7 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > {: .language-python}
 > 
 > * First, let's train the model using CPU
+>
 > ~~~
 > with tf.device('/device:CPU:0'):
 >     history = model.fit(data_train,epochs=10,
