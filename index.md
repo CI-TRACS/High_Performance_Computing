@@ -23,7 +23,7 @@ By the end of this workshop, students will know how to:
 * Have a basic understanding of how to request GPUs and utilize them for deep learning tasks
 * Have a basic understanding of the performance difference between CPU and GPU for deep learning
 * Have a basic understanding of different types of file system found on HPC clusters
-* Have a basic understanding of how correct file system choice affect deep learning performance
+* Have a basic understanding of how correct file system choice affect application performance
 
 
 > ## Getting Started
