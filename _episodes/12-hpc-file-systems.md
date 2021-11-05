@@ -5,17 +5,17 @@ exercises: 20
 questions:
 - "What is a file system?"
 - "What is a distributed file system?"
-- "How do you optimize file system on MANA?"
+- "How do you optimize file system on Mana?"
 objectives:
 - "Understand general file system and distributed file system concepts."
-- "Being able to stage files on MANA lustre scratch."
+- "Being able to stage files on Mana lustre scratch."
 keypoints:
 - "File system is a way in which operating systems organize data on storage devices."
 - "Distributed file system organizes data accross network attached storage devices."
 - "Distributed file system has the advantage of supporting larger scale storage capacity."
-- "MANA supports lustre and NFS file systems."
-- "Lustre on MANA is setup with solid state drives."
-- "NFS on MANA is setup with spinning drives."
+- "Mana supports lustre and NFS file systems."
+- "Lustre on Mana is setup with solid state drives."
+- "NFS on Mana is setup with spinning drives."
 ---
 
 ## What is a file system?
@@ -83,10 +83,10 @@ NFS is a single server distributed file system where file operations are not par
 ## Choosing the Right File System For Performance
 
 Depending on the user's need, different file systems are optimized for different purposes. One may be optimized for random access speed, one with error correcting capability, or one with high redundancy to prevent loss of data. 
-For this workshop, we will focus on disk random access speed MANA cluster.
+For this workshop, we will focus on disk random access speed Mana cluster.
 
-On MANA we have 3 locations for file storage: "home/user", "lus_scratch", and "nfs_scratch" folders available to us. 
-On MANA, our "home/user" directory resides on an NFS file system server. Though "home/user" is great for storing our files on the cluster, it's serverly lacking in read/write performance. For the best performance (read/write speed) we will mostly want to use "lus_scratch". As discussed above, the reason is because Lustre file system distributes workload accross multiple meta servers, while NFS is a single server file system. In addition, MANA Lustre file system is configured with solid state drives while NFS file system is configured with hardrives, improving MANA lustre file system read/write speed further.
+On Mana we have 3 locations for file storage: "home/user", "lus_scratch", and "nfs_scratch" folders available to us. 
+On Mana, our "home/user" directory resides on an NFS file system server. Though "home/user" is great for storing our files on the cluster, it's serverly lacking in read/write performance. For the best performance (read/write speed) we will mostly want to use "lus_scratch". As discussed above, the reason is because Lustre file system distributes workload accross multiple meta servers, while NFS is a single server file system. In addition, Mana Lustre file system is configured with solid state drives while NFS file system is configured with hardrives, improving Mana lustre file system read/write speed further.
 
 > ## Solid State Drive vs. Hardrive Performance
 > Solid state drives can read up to 10 times faster and writes up to 20 times faster than hard disk drive. 
@@ -94,7 +94,7 @@ On MANA, our "home/user" directory resides on an NFS file system server. Though 
 {: .callout}  
 
 > ## List Usage Information
-> On MANA, there's a command that lists disk usage on the cluster.
+> On Mana, there's a command that lists disk usage on the cluster.
 > Create a new cell below our previous block.
 > Paste the code into the cell and run.
 > You should see a table that lists disk space used and remaining space.
@@ -127,7 +127,7 @@ On MANA, our "home/user" directory resides on an NFS file system server. Though 
 > ## Timing Read/Write Operations 
 > Now that we have defined our read/write functions, let's profile them. 
 > In new cells, call our read / write functions from our "lus_scratch" directory.
-> Similarly call our read/write functions from our "home" directory (remember that home directory resides in MANA NFS file system servers).
+> Similarly call our read/write functions from our "home" directory (remember that home directory resides in Mana NFS file system servers).
 > To time the cells, we can call "%%time" at the beggining of our cells.
 > This is a special command in Jupyter Lab Notebook that allows us to time execution time of a cell. 
 > ~~~
