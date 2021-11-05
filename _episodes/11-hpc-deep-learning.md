@@ -491,7 +491,8 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 
 > ## Discuss
 > Why would you need an HPC cluster over your personal computer?
-> {: .discussion} 
+> 
+{: .discussion} 
 
 
 {% include links.md %}
