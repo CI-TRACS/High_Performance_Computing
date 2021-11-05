@@ -97,7 +97,7 @@ You can use following commands to see what modules are available on the cluster 
 ### So what is an environment then?
  
 Sometimes different applications require different versions of the Python packages than the one you've been using and this is where a Python environment comes in handy.  
-An environment (or a conda environment specifically, which we'll discuss later) is a directory that contains a specific collection of python packages and their different versions that you have installed. There are 2 most popular tools to set up yur environment:
+An environment (or a conda environment specifically, which we'll discuss later) is a directory, specific or isolated to a project, that contains a specific collection of python packages and their different versions that you have installed. There are 2 most popular tools to set up yur environment:
  
 1. Pip: a tool to install Python software packages only. 
 
@@ -112,7 +112,7 @@ An environment (or a conda environment specifically, which we'll discuss later) 
 
 ### Anaconda
 
-This is a popular package manager in scientific computing which handles the Python and R programming language realted dependencies rather easily. It is preferred more because:
+This is a popular package manager in scientific computing which handles the Python and R programming language related dependencies rather easily. It is preferred more because:
 - it has a clear directory structure which is easy to understand,
 - it allows you to install softwares written in any programming language,
 - it gives you a flexibility to create different environments with different software versions (and can install pip packages as well),
@@ -488,6 +488,10 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 * Microsoft [Azure notebook](https://visualstudio.microsoft.com/vs/features/notebooks-at-microsoft/#) is similar to Google Colab with cloud sharing functionality but provides more memory.
 * Kaggle 
 * Amazon Sage Maker
+
+> ## Discuss
+> Why would you need an HPC cluster over your personal computer?
+> {: .discussion} 
 
 
 {% include links.md %}
