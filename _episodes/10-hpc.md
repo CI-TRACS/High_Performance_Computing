@@ -107,8 +107,8 @@ on a compute node, Jupyter Lab and Rstudio.
 > While almost any modern browser should work with Open OnDemand, the developers recommend google chrome as it has the widest support
 > for the tools used to create Open OnDemand. [browser requirements](https://osc.github.io/ood-documentation/latest/requirements.html#browser-requirements)
 >
-> For security it is recommend you use a private browsing window with Open OnDemand as this allows a complete
-> log out by just simplying closing the window.  While logout does exist in Open OnDemand, it may not work as
+> For security it is recommend you use a private browsing window with Open OnDemand as this allows you completely
+> log out by just simplying closing the browser window.  While logout does exist in Open OnDemand, it may not work as
 > expected and really keep you logged in even after hitting logout.
 {: .callout}
 
