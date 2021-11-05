@@ -14,12 +14,13 @@ Please download the following file to your local computer.  We will be uploading
 
 We encourage participants to write comments and questions in chat and use the <a href="https://support.zoom.us/hc/en-us/articles/115001286183-Nonverbal-feedback-during-meetings#:~:text=To%20provide%20nonverbal%20feedback%20or,icon%20again%20to%20remove%20it." target="_blank" >non-verbal feedback features of zoom</a>.
 
+If at any time you have a question that is easier to talk through than writing it in chat, please indicate in chat you have a question or raise your virtual hand so that we know you wish to speak.
+
 <img src="./fig/non-verbal.png" alt="non-verbal icon" >
 
 <img src="./fig/non-verbal_min.png" alt="non-verbal icon from ..." >
 
 
-If at any time you have a question that is easier to talk through than writing it in chat, please indicate in chat you have a question or raise your virtual hand so that we know you wish to speak.
 
 
 {% include links.md %}
