@@ -81,7 +81,7 @@ You can use following commands to see what modules are available on the cluster 
 
 ### So what is an environment then?
  
-Sometimes different applications require different versions of the Python packages than the one you've been using and this is where a Python environment comes in handy.  An environment (or a conda environment specifically, which we'll discuss later) is a directory that contains a specific collection of python packages and their different versions that you have installed. There are 2 most popular tools to set up yur environment:
+Sometimes different applications require different versions of the Python packages than the one you've been using and this is where a Python environment comes in handy.  An environment (or a conda environment specifically, which we'll discuss later) is a directory that contains a specific collection of python packages and their different versions that you have installed. There are 2 popular tools to set up your environment:
  
 1. Pip: a tool to install Python software packages only. 
 
