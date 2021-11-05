@@ -59,10 +59,10 @@ For python based data science and machine learning applications, Jupyter noteboo
 
 ### Jupyter Lab vs Jupyter Notebook
 
-Jupyter notebook allows you to access python notebooks only (.ipynb files), i.e. it will create a computational environment which stores 
+Jupyter notebook allows you to access ipython notebooks only (.ipynb files), i.e. it will create a computational environment which stores 
 your code, results, plots, texts etc. And here you can work in only one of your environments. But Jupyter Lab gives a better user interface 
 along with all the facilties provided by the notebook. It is a flexible, web based application with a modular structure where one can access 
-python files (.py), python notebooks, html or markdown files, access file browser (to upload, download, copy, rename, delete files), work with 
+python files (.py), ipython notebooks, html or markdown files, access file browser (to upload, download, copy, rename, delete files), work with 
 multiple Jupyter notebooks and environments, all in the same window. It is more preferred for Data Science and Machine Learning research because 
 one can also do data visualization, add data, code, texts, equations all in one place and use big data tools.
   
