@@ -35,7 +35,8 @@ as soon as the resources requested are available.
 > * **GB of Ram:** 24 GB
 > * **Number of GPUs requested:** 1
 > * **GPU Type:** Any
-> 
+>
+> > ## Solution
 > > {% include figure.html url="" max-width="50%" file="/fig/ood_job.png" alt="Job running" caption="" %}
 > >
 > {: .solution}
