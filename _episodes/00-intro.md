@@ -17,8 +17,8 @@ keypoints:
 
 ## What Is an HPC System?
 
-The words "cloud" and the phrase "high-performance computing" or
-"HPC" are used a lot in different contexts and with various related meanings.
+The words "cloud" and the phrase cluster or high-performance computing (HPC)
+are used a lot in different contexts and with various related meanings.
 So what do they mean? And more importantly, how do we use them in our work?
 
 The *cloud* is a generic term commonly used to refer to computing resources
