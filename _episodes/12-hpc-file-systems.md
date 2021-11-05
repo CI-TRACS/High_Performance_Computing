@@ -1,7 +1,7 @@
 ---
 title: "Staging and File System Choice"
-teaching: 15
-exercises: 25
+teaching: 20
+exercises: 20
 questions:
 - "What is a file system?"
 - "What is a distributed file system?"
@@ -67,7 +67,7 @@ On Mana, the two main supported file systems are <b>Network File System (NFS)</b
 
 Lustre is a parallel distributed file system, where file operations are distributed across multiple file system servers. In Lustre, storage is divided among multiple servers allowing for ease of scalability and fault tolerance. This file system is great for random access performance.
 
-### NFS File System.
+### NFS File System
 
 &nbsp;
 
@@ -80,7 +80,7 @@ Lustre is a parallel distributed file system, where file operations are distribu
 
 NFS is a single server distributed file system where file operations are not parallel across servers but a single server serves requests to the cluster. NSF is an older technology and has the advantage of having gone through the test of time and is trusted among cluster architects. 
 
-## Choosing the Right File System For Performance.
+## Choosing the Right File System For Performance
 
 Depending on the user's need, different file systems are optimized for different purposes. One may be optimized for random access speed, one with error correcting capability, or one with high redundancy to prevent loss of data. 
 For this workshop, we will focus on disk random access speed MANA cluster.
