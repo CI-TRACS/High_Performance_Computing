@@ -17,7 +17,7 @@ keypoints:
 
 ## What Is an HPC System?
 
-The words "cloud", "cluster", and the phrase "high-performance computing" or
+The words "cloud" and the phrase "high-performance computing" or
 "HPC" are used a lot in different contexts and with various related meanings.
 So what do they mean? And more importantly, how do we use them in our work?
 
@@ -43,10 +43,6 @@ constraints, an HPC resource must exist in a specific, fixed location:
 networking cables can only stretch so far, and electrical and optical signals
 can travel only so fast.
 
-The word "cluster" is often used for small to moderate scale HPC resources less
-impressive than the [Top-500](https://www.top500.org). Clusters are often
-maintained in computing centers that support several such systems, all sharing
-common networking and storage to support common compute intensive tasks.
 
 > ## What else is an HPC system good for
 >
