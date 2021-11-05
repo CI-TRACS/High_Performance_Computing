@@ -479,12 +479,6 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 >    
 {: .challenge}
 
-> ## What's next?
-> 
-> The next thing is to tune your machine learning model by optimizing the hyperparameters.
-> 
-> {: .callout}
-
 
 ## Other resources to do Machine Learning
 
