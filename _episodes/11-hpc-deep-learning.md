@@ -25,7 +25,7 @@ as soon as the resources requested are available.
 >
 {: .callout}
                                              
-> ## Starting an Interactive session of Jupyter Lab
+> ## Starting an Interactive session of Jupyter Lab and Open Jyupyter Lab
 >
 > As we will be working in Jupyter Lab to explore some concepts when working with HPC systems and deep learning your challenge is to 
 > start an interactive application of Jupyter Lab with the following parameters
@@ -38,6 +38,8 @@ as soon as the resources requested are available.
 > * **Number of GPUs requested:** 1
 > * **GPU Type:** Any
 >
+> Once the interactive session is running Connect to the jupyter session by click the "Connect to Jupyter" button.
+> 
 > > ## Solution
 > > <img src="../fig/ood_job.png" alt="Job running"  max-width="50%" />
 > >
