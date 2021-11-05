@@ -218,7 +218,7 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > %matplotlib inline
 > ~~~
 > {: .language-python}
-
+>
 > 
 > * Check for CPU and GPU
 > 
@@ -285,6 +285,10 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > ~~~    
 > {: .language-python}
 > 
+> > ## Output
+> > {% include figure.html url="" max-width="50%" file="/fig/plots.png" %}
+>   
+>
 > * Convert data to HDF5 format
 > 
 > ~~~
@@ -465,6 +469,17 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 >  {: .language-python}
 >    
 {: .challenge}
+
+> ## What's next?
+> 
+> The next thing is to tune your machine learning model by optimizing the hyperparameters.
+> 
+> {: .callout}
+
+
+## Other resources to do Machine Learning
+
+You can use [Google Colab](https://colab.research.google.com/#) which uses Jupyter notebooks too but on Google server. Here you can get free limited compute resources and upgrade your account if you want more. The code usually runs on Google servers on cloud and is connected to your google account so all your projects will be saved in your Google Drive. 
 
 
 {% include links.md %}
