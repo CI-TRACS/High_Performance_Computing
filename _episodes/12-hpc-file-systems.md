@@ -78,7 +78,7 @@ Lustre is a parallel distributed file system, where file operations are distribu
 
 &nbsp;
 
-NFS is a single server distributed file system where file operations are not parallel across servers but a single server serves requests to the cluster. NSF is an older technology and has the advantage of having gone through the test of time and is trusted among cluster architects. 
+NFS is a single server distributed file system where file operations are not parallel across servers but a single server serves requests to the cluster. NFS is an older technology and has the advantage of having gone through the test of time and is trusted among cluster architects. 
 
 ## Choosing the Right File System For Performance
 
