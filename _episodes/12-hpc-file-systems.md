@@ -65,7 +65,7 @@ On Mana, the two main supported file systems are <b>Network File System (NFS)</b
 
 &nbsp;
 
-Lustre is a parallel distributed file system, where file operations are distributed across multiple file system servers. In Lustre, storage is divided among multiple servers allowing for ease of scalability and fault tolerance. This file system is great for random access performance.
+Lustre is a parallel distributed file system, where file operations are distributed across multiple file system servers. In Lustre, storage is divided among multiple servers allowing for ease of scalability and fault tolerance. This file system is great for high speed read/write performance.
 
 ### NFS File System
 
