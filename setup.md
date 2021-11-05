@@ -16,7 +16,7 @@ We encourage participants to write comments and questions in chat and use the <a
 
 <img src="./fig/non-verbal.png" alt="non-verbal icon" >
 
-If at any time you have a question that is easier to talk through than writing in chat, please indicate in chat you have a question or raise your virtual hand so that we know you wish to speak.
+If at any time you have a question that is easier to talk through than writing it in chat, please indicate in chat you have a question or raise your virtual hand so that we know you wish to speak.
 
 
 {% include links.md %}
