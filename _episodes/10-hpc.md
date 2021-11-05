@@ -104,7 +104,7 @@ on a compute node, Jupyter Lab and Rstudio.
 
 > ## Browser choice and using an incognito or private browsing window
 > 
-> While almost any modern browser should work with OOD, the developers recommend google chrome as it has the widest support
+> While almost any modern browser should work with Open OnDemand, the developers recommend google chrome as it has the widest support
 > for the tools used to create Open OnDemand. [browser requirements](https://osc.github.io/ood-documentation/latest/requirements.html#browser-requirements)
 >
 > For security it is recommend you use a private browsing window with Open OnDemand as this allows a complete
