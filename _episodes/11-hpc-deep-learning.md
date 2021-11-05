@@ -37,7 +37,7 @@ as soon as the resources requested are available.
 > * **GPU Type:** Any
 >
 > > ## Solution
-> > {% include figure.html url="" max-width="50%" file="/fig/ood_job.png" alt="Job running" caption="" %}
+> > <img src="../fig/ood_job.png" alt="Job running"  max-width="50%" />
 > >
 > {: .solution}
 {: .challenge}                                             
