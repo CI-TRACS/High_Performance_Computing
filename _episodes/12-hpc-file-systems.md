@@ -38,7 +38,7 @@ File systems are ways in which operating systems organize data (i.e. documents, 
 
 On a cluster, blocks of data that make up a single file are distributed among network attached storage or NAS devices. Similar principles apply here, the goal of a cluster file system is still to organize and locate blocks of data (but across network!) and present them to the end user as one contiguous file. One main benefit of stringing storage devices together into a network connected cluster is to increase storage capacity beyond what a single computer can have. Imagine working with 100 TB files on your laptop. Of course, the storage can be shared with different cluster users further increasing utilization of these storage devices. 
 
-On Mana, the two main supported file systems are <b>Network File System (NFS)</b> and <b>Lustre</b>.  Mana users have 2 special folder called lus_scratch and nfs_scratch where they can temporarily store data on the cluster. Note that the scratch folders will be purged after some period of time, please save your important files into your home directory.
+On Mana, the two main supported file systems are <b>Network File System (NFS)</b> and <b>Lustre</b>.  Mana users have two special folders called lus_scratch and nfs_scratch where they can temporarily store data on the cluster. Note that the scratch folders will be purged after some period of time, please save your important files into your home directory.
 
 > ## Locate Lustre and NFS File System Scratch On Mana
 > Let's locate our lustre and nfs scratch folder.
