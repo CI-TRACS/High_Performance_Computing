@@ -7,7 +7,6 @@ title: Setup
 * Have UH Duo/MFA enabled
 * Be able to connect to the workshop in Zoom
 * Have a modern web browser (preference for google Chrome)
-* 
 
 ---
 # Required files
