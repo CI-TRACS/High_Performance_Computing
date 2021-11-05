@@ -9,7 +9,9 @@ questions:
 objectives:
 - "Do a basic Deep Learning tutorial on Mana"
 keypoints:
-- "XXXXXXXXXX" 
+- "Open On Demand requires you have a strong, stable internet connection whereas SSH can work with weak connections too." 
+- "JupyterLab is a more common platform for data science research but there are other IDE (Integrated Development Environment softwares) like PyCharm, Spyder, RMarkdown too."
+- "Using multiple GPUs won't improve the performance of your machine learning model. It only helps for a very complex computation or large models."
 ---
 
 ## Jupyter Lab as an Interactive Application in Open OnDemand
@@ -21,40 +23,37 @@ The form is used to specify what resources you want, which are then placed into 
 as soon as the resources requested are available.  
 > ## Under the hood
 > 
-> The Open On Demand form for interactive applications defines a job script and passes it to the HPC systems job scheduler, taking the burden of how to start the application on the HPC system and how to write a job script that the job scheduler can understand off of the user.
+> The Open On Demand form for interactive applications define a job script and passes it to the HPC systems job scheduler, leaving the
+> hard work of how to start the application on the HPC system and how to write a job script that the job scheduler can understand.
 >
 {: .callout}
                                              
-> ## Starting an Interactive session of Jupyter Lab and Open Jyupyter Lab
+> ## Starting an Interactive session of Jupyter Lab
 >
 > As we will be working in Jupyter Lab to explore some concepts when working with HPC systems and deep learning your challenge is to 
 > start an interactive application of Jupyter Lab with the following parameters
 > * **Partition:** workshop
 > * **Number of hours:** 3
-> * **Number of Nodes:** 1
-> * **Number of Tasks per Node**: 1
-> * **Number of cores per task:** 4
+> * **Number of cores:** 4
 > * **GB of Ram:** 24 GB
 > * **Number of GPUs requested:** 1
 > * **GPU Type:** Any
 >
-> Once the interactive session is running Connect to the jupyter session by click the "Connect to Jupyter" button.
-> 
-> > ## Solution
-> > <img src="../fig/ood_job.png" alt="Job running"  max-width="50%" />
-> >
-> {: .solution}
 {: .challenge}                                             
                                              
   
-## Jupyter Lab vs Jupyter Notebook
+## Why use Jupyter?
 
-Jupyter notebook allows you to access .ipynb files (or python notebooks) only, i.e. it will create a computational environment which stores your code, results, plots, texts etc. And here you can work only in one of your environments. But Jupyter Lab gives a better user interface along with all the facilties provided by the notebook. It has a modular structure where one can access .py (or python files), .ipynb (python notebooks), html or markdown files, access file browser, work with multiple Jupyter notebooks and environments, all in the same window. 
+For python based data science and machine learning applications, Jupyter notebook is a great platform because:
+1. you can store your data, code, visualizations, equations, text, outputs all in one place,
+2. you can easily share your work easily in different formats like JSON, PDF, html,
+3. it supports more than 40 programming languages and has an interactive output.
+
+### Jupyter Lab vs Jupyter Notebook
+
+Jupyter notebook allows you to access python notebooks only (.ipynb files), i.e. it will create a computational environment which stores your code, results, plots, texts etc. And here you can work in only one of your environments. But Jupyter Lab gives a better user interface along with all the facilties provided by the notebook. It is a flexible, web based application with a modular structure where one can access python files (.py), python notebooks, html or markdown files, access file browser (to upload, download, copy, rename, delete files), work with multiple Jupyter notebooks and environments, all in the same window. It is more preferred for Data Science and Machine Learning research because one can also do data visualization, add data, code, texts, equations all in one place and use big data tools.
   
-### Jupyter Lab
-It is a flexible, web based application which is mainly used in data science and machine learning research. It gives you acess to file browser (to upload, download, copy, rename, delete files), do data visualization, add data, code, texts, equations all in one place, use big data tools, share your work with others. It supports more than 40 programming languages and has an interactive output. 
-  
-> ## How does Jupyter work?
+> ## How does JupyterLab work?
 >
 > You write your code or plain text in rectangular “cells” and the browser then passes it to the back-end “kernel”, which runs your code and returns output.
 >
@@ -67,11 +66,11 @@ It is a flexible, web based application which is mainly used in data science and
 >
 {: .callout} 
 
-## How to access and install softwares and modules on a cluster?
+## How to access and install softwares and modules on cluster?
   
 ### Using a package manager
 
-Working with Python requires one to have different packages installed with a specific version which gets updated once in a while. On Mana, there are software packages already installed on the cluster which one can use to install those required libraries, softwares and can even choose which version to install.
+Working with Python requires one to have different packages installed with a specific version which gets updated once in a while. On Mana, there are software packages already installed on the cluster which one can use to install the required libraries, softwares and can even choose which version to install.
 You can use following commands to see what modules are available on the cluster or which ones are already loaded or to load a specific module in your environment:
 
 ~~~
@@ -83,7 +82,7 @@ You can use following commands to see what modules are available on the cluster 
 
 ### So what is an environment then?
  
-Sometimes different applications require different versions of the Python packages than the one you've been using and this is where a Python environment comes in handy.  An environment (or a conda environment specifically, which we'll discuss later) is a directory that contains a specific collection of python packages and their different versions that you have installed. There are 2 popular tools to set up your environment:
+Sometimes different applications require different versions of the Python packages than the one you've been using and this is where a Python environment comes in handy.  An environment (or a conda environment specifically, which we'll discuss later) is a directory that contains a specific collection of python packages and their different versions that you have installed. There are 2 most popular tools to set up yur environment:
  
 1. Pip: a tool to install Python software packages only. 
 
@@ -91,14 +90,14 @@ Sometimes different applications require different versions of the Python packag
   
 > ## Note  
 > 
-> Packages contains all the files you need for the modules it supplies
+> package contains all the files you need for a module
 >
 {: .callout}
 
 
 ### Anaconda
 
-This is a popular package manager in scientific computing which handles the Python and R programming language related dependencies rather easily. It is preferred more because:
+This is a popular package manager in scientific computing which handles the Python and R programming language realted dependencies rather easily. It is preferred more because:
 - it has a clear directory structure which is easy to understand,
 - it allows you to install softwares written in any programming language,
 - it gives you a flexibility to create different environments with different software versions (and can install pip packages as well),
@@ -203,6 +202,7 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > %matplotlib inline
 > ~~~
 > {: .language-python}
+
 > 
 > * Check for CPU and GPU
 > 
@@ -223,7 +223,11 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > {: .solution}
 > 
 {: .challenge}
-> 
+>
+> > ### Is GPU necessary for machine learning?
+> > No, machine learning algorithms can be deployed using CPU or GPU, depending on the applications. They both have their distinct properties and which one would be best for your application depends on factors like: speed, power usage and cost. CPUs are more general purposed processors, are cheaper and provide a gateway for data to travel from source to GPU cores. But GPU have an advantage to do parallel computing when dealing with large datasets, complex neural network models. The difference between the two lies in basic features of a processor i.e. cache, clock speed, power consumption, bandwidth and number of cores. Read more that [here](https://thinkml.ai/cpu-vs-gpu-in-machine-learning-algorithms-which-is-better/#).
+> > {: .discussion}
+>  
 > * Load the data and analyze its shape
 > 
 > ~~~
@@ -261,6 +265,11 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > ~~~
 > {: .language-python}
 > 
+> > ### What is HDF5 file?
+> > 
+> > HDF5 file format is a binary data format which is mainly used to store large, heterogenous files. It provides fast, parallel I/O processing. You can learn more about it [here](https://www.hdfgroup.org/solutions/hdf5/#) and [here](https://www.christopherlovell.co.uk/blog/2016/04/27/h5py-intro.html#).
+> > {.callout}
+>
 > * Define the model
 > 
 > ~~~
