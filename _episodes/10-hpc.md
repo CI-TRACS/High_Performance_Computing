@@ -19,7 +19,7 @@ to the cluster. When we are sitting at a computer (or standing, or holding it
 in our hands or on our wrists), we have come to expect a visual display with
 icons, widgets, and perhaps some windows or applications: a graphical user
 interface, or GUI. Since HPC systems are remote resources that we connect
-to over often slow or laggy interfaces (WiFi and VPNs especially), it is more
+to over often slow or laggy interfaces (WiFi and Virtual private networks (VPN)s especially), it is more
 practical to use a command-line interface, or CLI, in which commands and
 results are transmitted via text, only. Anything other than text (images, for
 example) must be written to disk and opened with a separate program.
