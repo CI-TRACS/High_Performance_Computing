@@ -89,7 +89,7 @@ Sometimes different applications require different versions of the Python packag
   
 > ## Note  
 > 
-> package contains all the files you need for a module
+> Packages contains all the files you need for a module
 >
 {: .callout}
 
