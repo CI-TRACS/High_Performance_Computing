@@ -474,7 +474,10 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 
 ## Other resources to do Machine Learning
 
-You can use [Google Colab](https://colab.research.google.com/#) which uses Jupyter notebooks too but on Google server. Here you can get free limited compute resources and upgrade your account if you want more. The code usually runs on Google servers on cloud and is connected to your google account so all your projects will be saved in your Google Drive. 
+* You can use [Google Colab](https://colab.research.google.com/#) which uses Jupyter notebooks too but on Google server. Here you can get free limited compute resources (even GPU) and upgrade your account (for TPU) if you want more. The code usually runs on Google servers on cloud and is connected to your google account so all your projects will be saved in your Google Drive. 
+* Microsoft [Azure notebook](https://visualstudio.microsoft.com/vs/features/notebooks-at-microsoft/#) is similar to Google Colab with cloud sharing functionality but provides more memory.
+* Kaggle 
+* Amazon Sage Maker
 
 
 {% include links.md %}
