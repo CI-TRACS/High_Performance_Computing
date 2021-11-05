@@ -272,8 +272,7 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > {: .language-python}
 > 
 > > ## Output
-> > {% include figure.html url="" max-width="50%"
-   file="/fig/plots.png"}
+> > {% include figure.html url="" max-width="50%" file="/fig/plots.png" %}
 >   
 >
 > * Convert data to HDF5 format
