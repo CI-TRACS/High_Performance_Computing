@@ -31,7 +31,9 @@ as soon as the resources requested are available.
 > start an interactive application of Jupyter Lab with the following parameters
 > * **Partition:** workshop
 > * **Number of hours:** 3
-> * **Number of cores:** 4
+> * **Number of Nodes:** 1
+> * **Number of Tasks per Node**: 1
+> * **Number of cores per task:** 4
 > * **GB of Ram:** 24 GB
 > * **Number of GPUs requested:** 1
 > * **GPU Type:** Any
