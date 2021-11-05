@@ -20,7 +20,7 @@ keypoints:
 
 ## What is a file system?
 
-The term file system is ubiquitous among operating system users. At some point in time, you may have had to format a USB flash drive and may have to choose between different file systems such as FAT32 or NTFS (on a Windows OS), exFat or Mac OS Extended (on a Mac). 
+The term file system is ubiquitous among operating systems. At some point in time, you may have had to format a USB flash drive (SD card, memory stick) and may have to choose between different file systems such as FAT32 or NTFS (on a Windows OS), exFat or Mac OS Extended (on a Mac). 
 
 &nbsp;
 
