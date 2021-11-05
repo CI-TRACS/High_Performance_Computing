@@ -134,6 +134,14 @@ This is a popular package manager in scientific computing which handles the Pyth
 > ~~~
 > {: .language-bash}
 >
+> > ## Difference between conda envirnment and kernel
+> >
+> > Although we created a conda environment, the Jupyter notebook still cannot access it because "conda" is directory that contains all the 
+> > installed conda packages but it is "kernel" that runs the user's code and can use and access different conda environments, if required. 
+> > A kernel is the computational engine that executes the code contained in Jupyter notebook.
+> >
+> {: .callout}
+> 
 > - Create a python kernel
 > 
 > ~~~
@@ -144,13 +152,6 @@ This is a popular package manager in scientific computing which handles the Pyth
 >
 {: .challenge} 
 
-> ## Difference between conda envirnment and kernel
-> 
-> Although we created a conda environment, the Jupyter notebook still cannot access it because "conda" is directory that contains all the 
-> installed conda packages but it is "kernel" that runs the user's code and can use and access different conda environments, if required. 
-> A kernel is the computational engine that executes the code contained in Jupyter notebook.
-> 
-{: .callout}
 
 ## Deep Learning Tutorial
 
