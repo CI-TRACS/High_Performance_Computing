@@ -474,7 +474,7 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > {: .language-python}
 >  
 > > ## Solution
-> > <img max-width="50%" file="../fig/predictions.png" >
+> > <img max-width="50%" src="../fig/predictions.png" >
 > > 
 > {: .solution}
 >    
