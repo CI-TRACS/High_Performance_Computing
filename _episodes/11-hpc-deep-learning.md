@@ -261,16 +261,16 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > ~~~
 > {: .language-python}
 >
-> ~~~
-> ~~~
-> Train: X=(50000, 32, 32, 3), y=(50000, 1)
-> Test: X=(10000, 32, 32, 3), y=(10000, 1)
-> number of classes= 10
-> <class 'numpy.ndarray'>
-> ~~~
-> {: .language-python}
-> ~~~
-> {: .output}
+> > ## Solution
+> > ~~~
+> > Train: X=(50000, 32, 32, 3), y=(50000, 1)
+> > Test: X=(10000, 32, 32, 3), y=(10000, 1)
+> > number of classes= 10
+> > <class 'numpy.ndarray'>
+> > ~~~
+> > {: .language-python}
+> >
+> {: .solution}
 > 
 > * Plot some examples 
 > 
@@ -285,10 +285,10 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > ~~~    
 > {: .language-python}
 > 
-> ~~~
-> <img max-width="50%" src="../fig/plots.png" >
-> ~~~
-> {: .output}
+> > ## Solution
+> > <img max-width="50%" src="../fig/plots.png" >
+> >
+> {: .solution}
 >
 > * Convert data to HDF5 format
 > 
@@ -443,10 +443,9 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > ~~~
 > {: .language-python}
 > 
-> ~~~
-> <img max-width="50%" src="../fig/graphs.png" >
-> ~~~ 
-> {: .output}
+> > ## Solution
+> > <img max-width="50%" src="../fig/graphs.png" >
+> {: .solution}
 > 
 > * Evaluate the model and make predictions
 > 
@@ -474,10 +473,10 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 > ~~~ 
 > {: .language-python}
 >  
-> ~~~
-> <img max-width="50%" file="../fig/predictions.png" >
-> ~~~
-> {: .output}
+> > ## Solution
+> > <img max-width="50%" file="../fig/predictions.png" >
+> > 
+> {: .solution}
 >    
 {: .challenge}
 
