@@ -65,7 +65,7 @@ It is a flexible, web based application which is mainly used in data science and
 >
 {: .callout} 
 
-## How to access and install softwares and modules on cluster?
+## How to access and install softwares and modules on a cluster?
   
 ### Using a package manager
 
