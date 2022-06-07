@@ -350,7 +350,7 @@ CIFAR-10 is a common dataset used for machine learning and computer vision resea
 >         self.batch_size = batch_size
 >         self.test = test
 >         self.shuffle = shuffle
->        self.on_epoch_end()
+>         self.on_epoch_end()
 >
 >     def __del__(self):
 >         self.hf.close()
