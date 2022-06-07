@@ -143,10 +143,7 @@ This is a popular package manager in scientific computing which handles the Pyth
 > - Install relevant libraries
 > 
 > ~~~
-> conda install tensorflow-gpu
-> conda install matplotlib
-> conda install tensorflow
-> conda install keras
+> conda install tensorflow-gpu matplotlib tensorflow keras
 > ~~~
 > {: .language-bash}
 >
